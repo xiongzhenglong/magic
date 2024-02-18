@@ -1,0 +1,245 @@
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Login with phone number
+</title><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="stylesheet" href="./static/index.css">
+<script src="./static/js/jquery-1.7.2.js?v=2030"></script>
+<script src="./static/js/cmd.js?v=2030"></script>
+<style type="text/css">
+@font-face{font-family:uicon-iconfont;src:url(t/font_2225171_8kdcwk4po24.ttf) format("truetype")}
+.u-icon__icon{font-family:uicon-iconfont;position:relative;display:flex;flex-direction:row;align-items:center}
+.u-checkbox__icon-wrap{box-sizing:border-box;transition-property:border-color,background-color,color;transition-duration:.2s;color:#606266;display:flex;flex-direction:row;align-items:center;justify-content:center;color:transparent;text-align:center;margin-right:6px;font-size:6px;border-width:1px;border-color:#c8c9cc;border-style:solid}.u-checkbox__icon-wrap--circle{border-radius:100%}
+.main-center-flex{display:flex;align-items:center;justify-content:center}
+.main-start-flex{display:flex;align-items:center;justify-content:flex-start}.column-start-flex{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}.container{height:100vh;background:linear-gradient(90deg,#f2f0ff,#edebff,#f3f8ff);position:relative}.head{width:100%;
+margin-top:44px}.head-title_1{font-size:23px;font-family:PingFangSC;font-weight:500;color:#333}.head-title_2{font-size:13px;font-family:PingFang SC;font-weight:500;color:#999;margin-top:16px} .u-form{margin-top:55px}.form-item{width:100%;height:55px}.dev-text{text-align:left;color:#f36464;font-size:12px;padding-top:8px} uni-input{padding-left:16px}.get-code{height:100%;font-size:15px;font-family:PingFang SC;font-weight:400;color:#6565e7}
+.agreement{font-size:13px;font-family:PingFang SC;font-weight:400;color:#999}.login-button{
+width:100%;height:50px;background:#4f4f52;font-size:18px;font-family:PingFang SC;font-weight:400;color:#fff;margin-top:55px}.password-login{font-size:14px;font-family:PingFang SC;font-weight:400;color:#999;margin-top:15px}.line{height:100%;width:1px;background:#e1dfdf;position:absolute}
+  </style>
+  </head>
+<body>
+<div class="container column-start-flex">
+<div id="dl1" style="display: ;">
+	<div class="head">
+		<div class="head-title_1">Password login</div>
+	</div>
+	<div class="body">
+<div class="u-form">
+	<div>
+	<div class="form-item main-start-flex">
+	<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+	<img src="static/image/kitego/phone.png" draggable="false" style="opacity: 1;"></uni-image></div>
+	<div>
+<uni-input>
+	<div class="uni-input-wrapper"><input id="tel1" placeholder="enter phone number" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div>
+	</uni-input>
+	</div>
+	</div>
+	<div class="xian"></div>
+	</div>
+	<div>
+	<div class="form-item main-start-flex">
+	<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+	
+	<img src="static/image/kitego/password.png" draggable="false" style="opacity: 1;"></uni-image></div>
+	<div>
+	<uni-input>
+	<div class="uni-input-wrapper"><input id="pwd1" placeholder="enter password" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="password" class="uni-input-input"></div>
+	</uni-input>
+	</div>
+	</div>
+	<div class="xian"></div>
+	</div>
+	<div>
+				<div class="form-item main-start-flex">
+					<div>
+					<div>
+						<div class="u-checkbox__icon-wrap u-checkbox__icon-wrap--circle" style="background-color: rgb(41, 121, 255); border-color: rgb(41, 121, 255); width: 18px; height: 18px;">
+						<div class="u-icon u-checkbox__icon-wrap__icon u-icon--right"><uni-text hover-class="" class="u-icon__icon uicon-checkbox-mark" style="font-size: 12px; line-height: 12px; font-weight: normal; top: 0px; color: rgb(255, 255, 255);"><span></span></uni-text></div>
+						</div>
+					</div>
+					</div>
+					<div class="agreement">I have read and agree<uni-text><span>《User Agreement》</span></uni-text></div>
+				</div>
+		<div class="xian"></div>
+	</div>
+		<div class="dev-text" id="msg1"></div>
+	</div>
+	</div>
+	<div class="main-center-flex">
+		<div class="login-button main-center-flex" onclick="checklogin()">Log in now</div>
+	</div>
+	<div class="password-login">
+		<div class="main-center-flex" style="position: relative;">
+			<div onclick="qhdl(2)">register</div>
+			<div class="line"></div>
+			<div style="margin-left: 44px;" onclick="qhdl(3)">Retrieve password</div>
+		</div>
+	</div>
+</div>
+
+<div id="dl2" style="display: none;">
+<div class="head">
+<div class="head-title_1">Register</div>
+<div class="head-title_2"></div>
+</div>
+<div class="body">
+<div class="u-form">
+<div>
+	<div>
+		<div class="form-item main-start-flex">
+		<div>
+		<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+		<img src="static/image/kitego/phone.png" draggable="false" style="opacity: 1;"></uni-image></div>
+		</div>
+		<div><uni-input>
+		<div style="display: inline-flex;">
+			<select id="qy" style="border: none;background-color: #b4dafb00;">
+				<option>+63</option>
+			</select><input id="tel2" placeholder="enter phone number" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div>
+		</uni-input></div>
+		</div>
+	</div>
+	<div class="xian"></div>
+</div>
+
+
+<div>
+<div>
+<div class="form-item main-start-flex">
+<div>
+<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+<img src="static/image/kitego/code.png" draggable="false" style="opacity: 1;"></uni-image></div>
+</div>
+<div>
+<div>
+<div><uni-input>
+<div>
+<input id="code2" placeholder="enter verification code" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div>
+</uni-input></div>
+</div>
+</div>
+<div class="get-code main-center-flex"><uni-text onclick="sendsms()"><span>Sending</span></uni-text></div>
+</div>
+</div>
+<div class="xian"></div>
+</div>
+
+	<div>
+	<div class="form-item main-start-flex">
+	<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+	
+	<img src="static/image/kitego/password.png" draggable="false" style="opacity: 1;"></uni-image></div>
+	<div>
+	<uni-input>
+	<div class="uni-input-wrapper"><input id="pwd2" placeholder="enter password" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="password" class="uni-input-input"></div>
+	</uni-input>
+	</div>
+	</div>
+	<div class="xian"></div>
+	</div>
+
+
+<div>
+<div>
+<div class="form-item main-start-flex">
+<div data-v-4d483e4c="" class="u-checkbox-group u-checkbox-group--row">
+<div class="u-checkbox u-checkbox-label--left">
+<div class="u-checkbox__icon-wrap u-checkbox__icon-wrap--circle" style="background-color: rgb(41, 121, 255); border-color: rgb(41, 121, 255); width: 18px; height: 18px;">
+<div class="u-icon u-checkbox__icon-wrap__icon u-icon--right"><uni-text hover-class="" class="u-icon__icon uicon-checkbox-mark" style="font-size: 12px; line-height: 12px; font-weight: normal; top: 0px; color: rgb(255, 255, 255);"><span></span></uni-text></div>
+</div>
+<uni-text style="color: rgb(96, 98, 102); font-size: 15px; line-height: 15px;"><span></span></uni-text></div>
+</div>
+<div class="agreement">I have read and agree<uni-text><span>《User Agreement》</span></uni-text></div>
+</div>
+</div>
+
+<div data-v-2f0e5305="" data-v-03e1ba13="" class="u-line" style="margin: 0px; border-bottom: 1px solid rgb(214, 215, 217); width: 100%; transform: scaleY(0.5); border-top-color: rgb(214, 215, 217); border-right-color: rgb(214, 215, 217); border-left-color: rgb(214, 215, 217);"></div>
+</div>
+<div class="dev-text" id="msg2"></div>
+</div>
+</div>
+<div class="main-center-flex">
+<div class="login-button main-center-flex" onclick="reg()">Login/Register Now</div>
+</div>
+<div class="password-login">
+<div onclick="qhdl(1)">Password login</div>
+</div>
+</div>
+
+<div id="dl3" style="display:none ;">
+<div class="head">
+<div class="head-title_1">Retrieve password</div>
+</div>
+<div class="body">
+<div class="u-form">
+<div>
+<div class="form-item main-start-flex">
+<div>
+<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+<img src="static/image/kitego/phone.png" draggable="false" style="opacity: 1;"></uni-image></div>
+</div>
+<div>
+<uni-input>
+<div class="uni-input-wrapper">
+<input placeholder="enter phone number" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div>
+</uni-input>
+</div>
+</div>
+<div class="xian"></div>
+</div>
+<div>
+<div class="form-item main-start-flex">
+<div>
+<div><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+<img src="static/image/kitego/code.png" draggable="false" style="opacity: 1;"></uni-image></div>
+</div>
+<div>
+<uni-input>
+<div class="uni-input-wrapper">
+<input placeholder="enter verification code" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div>
+</uni-input>
+</div>
+<div class="get-code main-center-flex"><uni-text><span>Sending</span></uni-text></div>
+</div>
+<div class="xian"></div>
+</div>
+<div>
+<div class="form-item main-start-flex">
+<div>
+<div class=""><uni-image style="border-radius: 0px; width: 18px; height: 18px;">
+<img src="static/image/kitego/password.png" draggable="false" style="opacity: 1;"></uni-image></div>
+</div>
+<div>
+<uni-input>
+<div class="uni-input-wrapper">
+<input placeholder="enter password" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="password" class="uni-input-input"></div>
+</uni-input>
+</div>
+</div>
+<div class="xian" style=""></div>
+</div>
+<div class="dev-text" id="msg3"></div>
+</div>
+</div>
+<div class="main-center-flex">
+<div class="login-button main-center-flex">Submit and confirm</div>
+</div>
+<div class="password-login">
+<div onclick="qhdl(1)">Password login</div>
+</div>
+</div>
+
+
+</div>
+<script>
+var dlzz=1;
+function qhdl(i){
+console.log(i);
+	if(dlzz>0){
+		$("#dl"+dlzz).hide();
+	}
+	$("#dl"+i).show();
+	dlzz=i;
+}
+</script>
+</body>
+</html>

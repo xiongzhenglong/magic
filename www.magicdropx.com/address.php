@@ -1,0 +1,54 @@
+﻿<?php
+include "cfg/config.php";
+if($uid==""){
+	echo "<script>location.href='login.html';</script>";
+    exit;
+}
+$dz=runsqld($db,"select * from hm_user_address where user_id='$uid' order by id asc");
+?>
+<html lang="zh-CN" style="--status-bar-height:0px; --top-window-height:0px; --window-left:0px; --window-right:0px; --window-margin:0px; --window-top:calc(var(--top-window-height) + calc(44px + env(safe-area-inset-top))); --window-bottom:0px;"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>地址管理</title><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"><script src="./static/js/jquery-1.7.2.js?v=2030"></script><script src="./static/js/cmd.js?v=2030"></script><link rel="stylesheet" href="./static/index.css"><style type="text/css">@charset "UTF-8";
+.main-center-flex{display:flex;align-items:center;justify-content:center}
+.main-start-flex{display:flex;align-items:center;justify-content:flex-start}.main-align-start-flex{display:flex;align-items:flex-start;justify-content:center}.main-start-align-start-flex{display:flex;align-items:flex-start;justify-content:flex-start}.main-start-align-end-flex{display:flex;align-items:flex-end;justify-content:flex-start}.main-end-flex{display:flex;align-items:center;justify-content:flex-end}.main-space-between{display:flex;align-items:center;justify-content:space-between}.main-space-around{display:flex;align-items:center;justify-content:space-around}.main-center-align-end{display:flex;align-items:flex-end;justify-content:center}.column-start-flex{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}.column-end-flex{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}.column-align-start-flex{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.column-align-end-flex{display:flex;flex-direction:column;align-items:flex-end;justify-content:center}.column-align-start-space-flex{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}.column-center-flex{display:flex;flex-direction:column;align-items:center;justify-content:center}.column-space-between{display:flex;flex-direction:column;align-items:center;justify-content:space-between}.text-ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.text-ellipsis_2{display:-webkit-box;overflow:hidden;
+-webkit-box-orient:vertical;-webkit-line-clamp:2}.box-grow-0{
+min-width:0;flex-grow:0;flex-shrink:0}.box-grow-1{
+min-width:0;flex-grow:1;flex-shrink:1}.dir-left-nowrap{
+display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button::after{border:none}.clear-button{position:relative;display:block;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0;box-sizing:border-box;text-align:center;text-decoration:none;line-height:1.35;-webkit-tap-highlight-color:transparent;overflow:hidden;color:#000;background-color:#fff;width:100%;height:100%;border-radius:0}
+.u-line-1{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:1;-webkit-box-orient:vertical!important}.u-line-2{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:2;-webkit-box-orient:vertical!important}.u-line-3{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:3;-webkit-box-orient:vertical!important}.u-line-4{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:4;-webkit-box-orient:vertical!important}.u-line-5{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:5;-webkit-box-orient:vertical!important}.u-border{border-width:.5px!important;border-color:#dadbde!important;border-style:solid}.u-border-top{border-top-width:.5px!important;border-color:#dadbde!important;border-top-style:solid}.u-border-left{border-left-width:.5px!important;border-color:#dadbde!important;border-left-style:solid}.u-border-right{border-right-width:.5px!important;border-color:#dadbde!important;border-right-style:solid}.u-border-bottom{border-bottom-width:.5px!important;border-color:#dadbde!important;border-bottom-style:solid}.u-border-top-bottom{border-top-width:.5px!important;border-bottom-width:.5px!important;border-color:#dadbde!important;border-top-style:solid;border-bottom-style:solid}.u-reset-button{padding:0;background-color:initial;font-size:inherit;line-height:inherit;color:inherit}.u-reset-button::after{border:none}.u-hover-class{opacity:.7}.u-primary-light{color:#ecf5ff}.u-warning-light{color:#fdf6ec}.u-success-light{color:#f5fff0}.u-error-light{color:#fef0f0}.u-info-light{color:#f4f4f5}.u-primary-light-bg{background-color:#ecf5ff}.u-warning-light-bg{background-color:#fdf6ec}.u-success-light-bg{background-color:#f5fff0}.u-error-light-bg{background-color:#fef0f0}.u-info-light-bg{background-color:#f4f4f5}.u-primary-dark{color:#398ade}.u-warning-dark{color:#f1a532}.u-success-dark{color:#53c21d}.u-error-dark{color:#e45656}.u-info-dark{color:#767a82}.u-primary-dark-bg{background-color:#398ade}.u-warning-dark-bg{background-color:#f1a532}.u-success-dark-bg{background-color:#53c21d}.u-error-dark-bg{background-color:#e45656}.u-info-dark-bg{background-color:#767a82}.u-primary-disabled{color:#9acafc}.u-warning-disabled{color:#f9d39b}.u-success-disabled{color:#a9e08f}.u-error-disabled{color:#f7b2b2}.u-info-disabled{color:#c4c6c9}.u-primary{color:#3c9cff}.u-warning{color:#f9ae3d}.u-success{color:#5ac725}.u-error{color:#f56c6c}.u-info{color:#909399}.u-primary-bg{background-color:#3c9cff}.u-warning-bg{background-color:#f9ae3d}.u-success-bg{background-color:#5ac725}.u-error-bg{background-color:#f56c6c}.u-info-bg{background-color:#909399}.u-main-color{color:#303133}.u-content-color{color:#606266}.u-tips-color{color:#909193}.u-light-color{color:#c0c4cc}.u-safe-area-inset-top{padding-top:0;padding-top:constant(safe-area-inset-top);padding-top:env(safe-area-inset-top)}.u-safe-area-inset-right{padding-right:0;padding-right:constant(safe-area-inset-right);padding-right:env(safe-area-inset-right)}.u-safe-area-inset-bottom{padding-bottom:0;padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom)}.u-safe-area-inset-left{padding-left:0;padding-left:constant(safe-area-inset-left);padding-left:env(safe-area-inset-left)}uni-toast{z-index:10090}uni-toast .uni-toast{z-index:10090}::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}:not(not){box-sizing:border-box}</style><style type="text/css">.container{width:100%;min-height:100vh;background:linear-gradient(90deg,#f2f0ff,#edebff,#f3f8ff);padding:15px 15px calc(90px + env(safe-area-inset-bottom)) 15px}.footer{width:100%;height:calc(75px + env(safe-area-inset-bottom));background:#fff;padding-bottom:env(safe-area-inset-bottom);box-shadow:0.5px -2px 8px 0 rgba(30,30,30,.15);position:fixed;bottom:0;left:0}.add-address{width:345px;height:42px;background:#3f3f42;font-size:14px;font-family:Source Han Sans CN;font-weight:400;color:#fff}.radio-group-container{width:100%}.address-item{width:100%;min-height:111px;background:#fff;padding:15px 15px 10px 15px;margin-bottom:15px}.name-phone{width:100%;height:25px;font-size:13px;font-family:Source Han Sans CN;font-weight:400;color:#bababa}.name-phone>uni-text{font-size:15px;font-family:Source Han Sans CN;font-weight:700;color:#333;margin-right:5px}.address-detail{width:100%;font-size:14px;font-family:Source Han Sans CN;font-weight:400;color:#666}.address-operation{width:100%;height:30px}.address-operation>div{height:100%}.address-operation>div:first-child{font-size:12px;font-family:Source Han Sans CN;font-weight:400;color:#bababa}.address-operation>div:last-child{font-size:12px;font-family:Source Han Sans CN;font-weight:400;color:#666}.address-operation>div:last-child>div:last-child{margin-left:16px}.xuanz {background-image: url(static/image/t4.png);background-size: contain;    border: none;    border-radius: 0;}.xuanz1 {background-color: rgb(235, 92, 74)!important; border-color: rgb(235, 92, 74)!important;}</style></head><body><uni-app><uni-page><uni-page-head><div class="uni-page-head" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"><div class="uni-page-head-hd" onclick="history.go(-1);"><div class="uni-page-head-btn"><i class="uni-btn-icon" style="color: rgb(0, 0, 0); font-size: 27px;"></i></div><div class="uni-page-head-ft"></div></div><div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 地址管理 </div></div><div class="uni-page-head-ft"></div></div><div class="uni-placeholder"></div></uni-page-head><uni-page-wrapper><uni-page-body style="overflow: "><div><div class="container">
+<uni-radio-group>
+<?php
+$xzd=0;
+for($i=0;$i<count($dz);$i++){
+	$xz='';
+	if($dz[$i]['default_flag']==1){
+		$xz='<div id="xz'.$i.'" class="uni-radio-input uni-radio-input-checked xuanz1" onclick="btn1('.$i.')"></div>';
+		$xzd=$i;
+	}else{
+		$xz='<div id="xz'.$i.'" class="uni-radio-input uni-radio-input-checked" onclick="btn1('.$i.')"></div>';
+	}
+	echo '<div>
+	<div class="address-item">
+		<div class="name-phone main-start-flex"><uni-text><span>'.$dz[$i]['receiver'].'</span></uni-text>'.$dz[$i]['phone'].'</div>
+		<div class="address-detail main-start-flex">'.$dz[$i]['province_name'].$dz[$i]['city_name'].$dz[$i]['area_name'].$dz[$i]['address'].'</div>
+		<div data-v-2f0e5305="" class="u-line" style="margin: 5px 0px; border-bottom: 1px solid rgb(248, 248, 248); width: 100%; border-top-color: rgb(248, 248, 248); border-right-color: rgb(248, 248, 248); border-left-color: rgb(248, 248, 248);"></div>
+		<div class="address-operation main-space-between">
+			<div class="main-start-flex"><uni-radio style="transform: scale(0.8);">
+			<div class="uni-radio-wrapper">
+			'.$xz.'
+			</div></uni-radio>设为默认</div>
+			<div class="main-start-flex"><div onclick="gourl(&quot;editadd.php?gid='.$dz[$i]['id'].'&quot;)">编辑</div><div>删除</div></div>
+		</div>
+	</div>
+</div>';
+}
+?>
+</uni-radio-group>
+<div class="footer main-center-flex"><div class="add-address main-center-flex">+ 添加收货地址</div></div><div data-v-30282a05="" data-v-5d12bc44="" class="u-popup bg"></div></div></div></uni-page-body></uni-page-wrapper></uni-page></uni-app></body>
+<script>
+var s=<?php echo $xzd;?>;
+function btn1(i){
+	$('#xz'+i).attr('class','uni-radio-input uni-radio-input-checked xuanz1');
+	$('#xz'+s).attr('class','uni-radio-input uni-radio-input-checked');
+	s=i;
+}
+</script>
+</html>
