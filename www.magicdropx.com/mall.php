@@ -149,7 +149,7 @@ for($i=0;$i<count($goods);$i++){
 												<div data-v-6e5fb1c2="" class="u-loadmore__content u-more">
 													
 													<uni-text data-v-6e5fb1c2="" class="u-line-1 u-loadmore__content__text" style="color: rgb(96, 98, 102); font-size: 14px; line-height: 14px; background-color: transparent;">
-														<span>没有更多了</span>
+														<span>No More</span>
 													</uni-text>
 												</div>
 												

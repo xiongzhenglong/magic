@@ -1,0 +1,1 @@
+哈希币 - Hash Coins

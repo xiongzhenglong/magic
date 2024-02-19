@@ -1,4 +1,4 @@
-﻿<html lang="zh-CN" style="--status-bar-height:0px; --top-window-height:0px; --window-left:0px; --window-right:0px; --window-margin:0px; --window-top:calc(var(--top-window-height) + calc(44px + env(safe-area-inset-top))); --window-bottom:0px;"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>开盒记录</title><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"><link rel="stylesheet" href="./static/index.css"><style type="text/css">.container[data-v-0d92b71b]{width:375px;
+﻿<html lang="zh-CN" style="--status-bar-height:0px; --top-window-height:0px; --window-left:0px; --window-right:0px; --window-margin:0px; --window-top:calc(var(--top-window-height) + calc(44px + env(safe-area-inset-top))); --window-bottom:0px;"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Unboxing Records</title><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"><link rel="stylesheet" href="./static/index.css"><style type="text/css">.container[data-v-0d92b71b]{width:375px;
 	/* height: 100vh; */
 	/* position: fixed; */
 	/* 	top: 0;
@@ -12,13 +12,13 @@
 <div class="uni-page-head-hd" onclick="history.go(-1);"><div class="uni-page-head-btn"><i class="uni-btn-icon" style="color: rgb(0, 0, 0); font-size: 27px;"></i></div>
 <div class="uni-page-head-ft"></div>
 </div>
-<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"><!----> 开盒记录 </div>
+<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"><!----> Unboxing Records </div>
 </div>
 <!----><div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-placeholder"></div>
 </uni-page-head><uni-page-wrapper><uni-page-body><div class="container"><div class="container"><div class="img" data-v-0d92b71b=""><uni-image data-v-0d92b71b="" class="image"><div style="background-image: url(&quot;./static/img/default.44927131.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
-<!----><img src="./static/img/default.44927131.png" draggable="false"></uni-image><div data-v-0d92b71b="" class="content">暂无信息</div>
+<!----><img src="./static/img/default.44927131.png" draggable="false"></uni-image><div data-v-0d92b71b="" class="content">No Information Available</div>
 </div>
 </div>
 </div>

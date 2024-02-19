@@ -2,7 +2,7 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>账户充值</title>
+<title>Account Recharge</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="./static/index.css">
 <script src="./static/js/jquery-1.7.2.js?v=2030"></script>
@@ -22,7 +22,7 @@
 <div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-page-head-bd">
-<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 账户充值 </div>
+<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> Account Recharge </div>
 </div>
 <div class="uni-page-head-ft"></div>
 </div>
@@ -31,12 +31,12 @@
 <div class="app-layout">
 <div class="container">
 <div class="head">
-<div class="text"><uni-text class="text-name"><span>账户余额（元）</span></uni-text><uni-text class="text-num"><span><?php echo $user['balance']?></span></uni-text></div>
+<div class="text"><uni-text class="text-name"><span>Account Balance (CNY)</span></uni-text><uni-text class="text-num"><span><?php echo $user['balance']?></span></uni-text></div>
 </div>
 <div class="content">
 <div class="content-title">
 <div class="span"></div>
-<div class="title">账户充值</div>
+<div class="title">Account Recharge</div>
 </div>
 <div class="list">
 <div id="p20" class="list-item active" onclick="xze(this)">
@@ -55,14 +55,14 @@
 <div class="money">500PHP</div>
 </div>
 <div id="pn" class="list-item" onclick="xze(this)">
-<div class="money">其他</div>
-<input id="pn1" maxlength="9" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入金额" autocomplete="off" type="number" class="uni-input-input" style="color: aliceblue;">
+<div class="money">Other</div>
+<input id="pn1" maxlength="9" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="Enter Amount" autocomplete="off" type="number" class="uni-input-input" style="color: aliceblue;">
 </div>
 </div>
 <div class="rech-type">
 <div class="content-title type-title">
 <div class="span"></div>
-<div class="title">充值方式</div>
+<div class="title">Recharge Method</div>
 </div>
 <uni-radio-group value="1">
 
@@ -90,11 +90,11 @@
 
 </uni-radio-group>
 </div>
-<div class="rech" onclick="pays()">立即充值</div>
+<div class="rech" onclick="pays()">Recharge Now</div>
 <div class="info">
-<div class="info-title">充值说明</div>
-<div class="info-content">1、充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容</div>
-<div class="info-content">2、充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容充值说明内容</div>
+<div class="info-title">Recharge Instructions</div>
+<div class="info-content">1、Recharge Instructions Content Recharge</div>
+<div class="info-content">2、Recharge Instructions Content Recharge</div>
 </div>
 </div>
 <div class="u-popup bg"></div>

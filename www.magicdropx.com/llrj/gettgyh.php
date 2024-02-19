@@ -68,8 +68,8 @@ $str='<div style="border-top: 3px solid #00c0ef;border-radius: 3px;background: #
 							<div style=" width: 100%; padding-top: 5px;">
 								<table style="margin-left: 0px; width: 100%;">
 									<tr role="row">
-										<th rowspan="1" colspan="1">昵称</th>
-										<th rowspan="1" colspan="1">注册时间</th>
+										<th rowspan="1" colspan="1">Nickname</th>
+										<th rowspan="1" colspan="1">Registration Time</th>
 									</tr>'.$str.'</table>
 							</div>
 						</div>
@@ -78,17 +78,17 @@ $str='<div style="border-top: 3px solid #00c0ef;border-radius: 3px;background: #
 						
 
 	<div>
-		<div style="color: #737373;text-align: center;">当前为第'.($kaishi+1).' - '.$pagesize.' 条记录,共 '.$nums.' 条</div>
+		<div style="color: #737373;text-align: center;">Currently showing records'.($kaishi+1).' - '.$pagesize.' ,total '.$nums.' records</div>
 	</div>
 	<input id="page" name="page" type="hidden" value="'.$page.'">
 
 		<div style="padding-bottom: 5px;">
 			<ul class="pagination">
-			<li class="paginate_button first" id="example1_first"><a href="javascript:void(0);" onclick="gettgyh(0)">首页</a></li>
-			<li class="paginate_button previous" id="example1_previous"><a href="javascript:void(0);" onclick="gettgyh('.($page-1).')">上一页 </a></li>
+			<li class="paginate_button first" id="example1_first"><a href="javascript:void(0);" onclick="gettgyh(0)">First Page</a></li>
+			<li class="paginate_button previous" id="example1_previous"><a href="javascript:void(0);" onclick="gettgyh('.($page-1).')">Previous Page </a></li>
 			'.$s1.'
-			<li class="paginate_button next" id="example1_next"><a href="javascript:void(0);" onclick="gettgyh('.($page+1).')">下一页 </a></li>
-			<li class="paginate_button last" id="example1_last"><a href="javascript:void(0);" onclick="gettgyh('.$pages.')">尾页 </a></li>
+			<li class="paginate_button next" id="example1_next"><a href="javascript:void(0);" onclick="gettgyh('.($page+1).')">Next Page </a></li>
+			<li class="paginate_button last" id="example1_last"><a href="javascript:void(0);" onclick="gettgyh('.$pages.')">Last Page </a></li>
 			</ul>
 
 		</div>

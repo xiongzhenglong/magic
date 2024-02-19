@@ -22,12 +22,12 @@ if($boxd['wfsm']!=""){
 if($boxd['wanfa']==1){
 	$xsjg='0.01';
 	$sl=3;
-	$hdsm='<div data-v-717eca78="" class="new-class main-space-between"><uni-text data-v-717eca78="" class="new-first"><span>新用户首单优惠</span></uni-text><div data-v-717eca78="" class="new-calc"><div data-v-717eca78="">首单'.$xsjg.'元</div><div data-v-717eca78="">-￥'.($boxd['price']-$xsjg).'</div></div></div><div class="xian"></div>';
+	$hdsm='<div data-v-717eca78="" class="new-class main-space-between"><uni-text data-v-717eca78="" class="new-first"><span>New User First Order Discount</span></uni-text><div data-v-717eca78="" class="new-calc"><div data-v-717eca78="">First Order'.$xsjg.'RMB</div><div data-v-717eca78="">-￥'.($boxd['price']-$xsjg).'</div></div></div><div class="xian"></div>';
 	$hj=2*$boxd['price']+0.01;
 }
 if($boxd['wanfa']==2){
 	$sl=2;
-	$hdsm='<div data-v-717eca78="" class="new-class main-space-between"><uni-text data-v-717eca78="" class="new-first"><span>买一送一优惠</span></uni-text><div data-v-717eca78="" class="new-calc"><div data-v-717eca78="">-￥'.($boxd['price']).'</div></div></div><div class="xian"></div>';
+	$hdsm='<div data-v-717eca78="" class="new-class main-space-between"><uni-text data-v-717eca78="" class="new-first"><span>Buy One Get One Free Offer</span></uni-text><div data-v-717eca78="" class="new-calc"><div data-v-717eca78="">-￥'.($boxd['price']).'</div></div></div><div class="xian"></div>';
 	$hj=2*$boxd['price']-$boxd['price'];
 }
 //print_r($box[0]);
@@ -36,7 +36,7 @@ if($boxd['wanfa']==2){
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>商品详情</title>
+<title>Product Details</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="./static/index.css">
 <link href="./static/css/swiper.min.css?v=2030" rel="stylesheet" />
@@ -145,10 +145,10 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button::after{border:non
 <div class="music"><img src="static/image/goods/music-bg.png" alt="" class="music-img"></div>
 <div class="right-menu column-center-flex">
 <div class="item-class column-center-flex"><img src="static/image/goods/fair-open.png" alt="" class="menu-img">
-<div class="menu-text">公平开盒</div>
+<div class="menu-text">Fair Unboxing</div>
 </div>
 <div class="item-class column-center-flex"><img src="static/image/goods/share.png" alt="" class="menu-img">
-<div class="menu-text">分享</div>
+<div class="menu-text">Share</div>
 </div>
 </div>
 <div class="uni-scroll-view">
@@ -255,8 +255,8 @@ for($i=0;$i<count($box);$i++){
 <img src="'.$box[$i]['goods_image'].'" draggable="false"></uni-image></div>
 <div data-v-97c3fd1c="" class="goods-type" style="'.$ys.'">'.$lxname.'</div>
 <div data-v-97c3fd1c="" class="goods-item-name text-ellipsis_2">'.$box[$i]['goods_name'].'</div>
-<div data-v-97c3fd1c="" class="goods-item-price main-start-flex"><uni-text data-v-97c3fd1c="" class="text-style"><span>参考价</span></uni-text><uni-text data-v-97c3fd1c="" class="money"><span>PHP<uni-text data-v-97c3fd1c="" class="money-num"><span>'.$box[$i]['price'].'</span></uni-text></span></uni-text></div>
-<div data-v-97c3fd1c="" class="goods-item-rank text-style">抽中范围：0~10486</div>
+<div data-v-97c3fd1c="" class="goods-item-price main-start-flex"><uni-text data-v-97c3fd1c="" class="text-style"><span>Reference Price</span></uni-text><uni-text data-v-97c3fd1c="" class="money"><span>PHP<uni-text data-v-97c3fd1c="" class="money-num"><span>'.$box[$i]['price'].'</span></uni-text></span></uni-text></div>
+<div data-v-97c3fd1c="" class="goods-item-rank text-style">Draw Range：0~10486</div>
 </div>';
 }
 ?>	
@@ -283,9 +283,9 @@ for($i=0;$i<count($box);$i++){
 <div class="buy-modal-content">
 <div class="buy-head">
 <div class="buy-head-title">
-<div>公平开盒</div>
-<div style="font-size: 25px;">精选商品速速来抽</div>
-<div class="buy-head-tip">满意即可发货，不满意可取消</div>
+<div>Fair Unboxing</div>
+<div style="font-size: 25px;">Selected Products, Hurry to Draw</div>
+<div class="buy-head-tip">Satisfied to Ship, Unsatisfied to Cancel</div>
 </div>
 <div class="buy-head-bk-1"><uni-image class="head-img">
 <img src="static/image/t5.png" draggable="false" style="opacity: 1;"></uni-image></div>
@@ -295,7 +295,7 @@ for($i=0;$i<count($box);$i++){
 <div class="buy-body">
 <div class="buy-num-item main-start-flex" onclick="kaiqi(1)">
 <div class="buy-item-left column-center-flex" style="background: linear-gradient(99deg, rgb(235, 92, 74) 0%, rgb(143, 9, 230) 0%, rgb(181, 70, 255) 100%);">
-<div>一发入魂</div>
+<div>One Shot, One Soul</div>
 </div>
 <div class="buy-item-right main-center-flex" style="background: linear-gradient(0deg, rgb(251, 247, 255) 0%, rgb(248, 226, 255) 100%);">
 <div class="main-center-align-end"><uni-text><span>￥</span></uni-text><uni-text><span><?php echo $boxd['price']*1;?></span></uni-text></div>
@@ -303,7 +303,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 <div class="buy-num-item main-start-flex" onclick="kaiqi(3)">
 <div class="buy-item-left column-center-flex" style="background: linear-gradient(99deg, rgb(235, 92, 74) 0%, rgb(143, 9, 230) 0%, rgb(181, 70, 255) 100%);">
-<div>欧气三连</div>
+<div>European Style Triple</div>
 </div>
 <div class="buy-item-right main-center-flex" style="background: linear-gradient(0deg, rgb(251, 247, 255) 0%, rgb(248, 226, 255) 100%);">
 <div class="main-center-align-end"><uni-text><span>￥</span></uni-text><uni-text><span><?php echo $boxd['price']*3;?></span></uni-text></div>
@@ -311,7 +311,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 <div class="buy-num-item main-start-flex" onclick="kaiqi(5)">
 <div class="buy-item-left column-center-flex" style="background: linear-gradient(99deg, rgb(235, 92, 74) 0%, rgb(143, 9, 230) 0%, rgb(181, 70, 255) 100%);">
-<div>霸气五连</div>
+<div>Domineering Five in a Row</div>
 </div>
 <div class="buy-item-right main-center-flex" style="background: linear-gradient(0deg, rgb(251, 247, 255) 0%, rgb(248, 226, 255) 100%);">
 <div class="main-center-align-end"><uni-text><span>￥</span></uni-text><uni-text><span><?php echo $boxd['price']*5;?></span></uni-text></div>
@@ -319,7 +319,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 <div class="buy-num-item main-start-flex" onclick="kaiqi(10)" style="margin-bottom: -1px;">
 <div class="buy-item-left column-center-flex" style="background: linear-gradient(99deg, rgb(255, 255, 255) 0%, rgb(235, 92, 74) 0%, rgb(246, 202, 124) 100%);">
-<div>壕气十连</div>
+<div>Luxury Ten in a Row</div>
 </div>
 <div class="buy-item-right main-center-flex" style="background: linear-gradient(0deg, rgb(255, 252, 247) 0%, rgb(247, 216, 184) 100%);">
 <div class="main-center-align-end"><uni-text><span>￥</span></uni-text><uni-text><span><?php echo $boxd['price']*10;?></span></uni-text></div>
@@ -337,7 +337,7 @@ for($i=0;$i<count($box);$i++){
 <div style="z-index: 10075; position: fixed; display: flex; bottom: 0px; left: 0px; right: 0px;">
 <div class="u-popup__content" style="flex: 1 1 0%;">
 <div class="container order-view" data-v-6dd1a41e="">
-<div class="head-title" data-v-717eca78="">订单确认</div>
+<div class="head-title" data-v-717eca78="">Order Confirmation</div>
 <uni-scroll-view enableflex="true" class="scroll-view" data-v-717eca78="">
 <div class="uni-scroll-view">
 <div class="uni-scroll-view" style="overflow: hidden auto;">
@@ -355,20 +355,20 @@ for($i=0;$i<count($box);$i++){
 </div>
 </div>
 </div>
-<div data-v-717eca78="" class="pay-info-item main-space-between"><uni-text><span>数量</span></uni-text>
+<div data-v-717eca78="" class="pay-info-item main-space-between"><uni-text><span>Quantity</span></uni-text>
 <div id="sl">x<?php echo $sl;?></div></div>
 <div class="xian"></div>
 <?php echo $hdsm;?>
-<div data-v-717eca78="" class="pay-info-item main-space-between"><uni-text ><span>合计</span></uni-text>
+<div data-v-717eca78="" class="pay-info-item main-space-between"><uni-text ><span>Total</span></uni-text>
 <div id="hj">￥<?php echo $hj;?></div></div>
 </div>
 <div data-v-717eca78="" class="pay-type">
-<div data-v-717eca78="" class="pay-type-head main-start-flex">支付方式</div>
+<div data-v-717eca78="" class="pay-type-head main-start-flex">Payment Method</div>
 <uni-radio-group data-v-717eca78="">
 		<uni-label data-v-717eca78="" class="pay-type-item main-space-between uni-label-pointer">
 <div data-v-717eca78="" class="main-start-flex"><uni-image data-v-717eca78="" class="icon-img">
 <img src="static/image/zfb.png" draggable="false" style="opacity: 1;"></uni-image>
-<div data-v-717eca78="" class="pay-type-name">支付宝</div>
+<div data-v-717eca78="" class="pay-type-name">Alipay</div>
 </div>
 <uni-radio data-v-717eca78="" style="transform: scale(0.8);">
 <div class="uni-radio-wrapper">
@@ -378,7 +378,7 @@ for($i=0;$i<count($box);$i++){
 		<uni-label data-v-717eca78="" class="pay-type-item main-space-between uni-label-pointer">
 <div data-v-717eca78="" class="main-start-flex"><uni-image data-v-717eca78="" class="icon-img">
 <img src="static/image/wx.png" draggable="false" style="opacity: 1;"></uni-image>
-<div data-v-717eca78="" class="pay-type-name">微信</div>
+<div data-v-717eca78="" class="pay-type-name">WeChat</div>
 </div>
 <uni-radio data-v-717eca78="" style="transform: scale(0.8);">
 <div class="uni-radio-wrapper">
@@ -388,7 +388,7 @@ for($i=0;$i<count($box);$i++){
 		<uni-label data-v-717eca78="" class="pay-type-item main-space-between uni-label-pointer">
 <div data-v-717eca78="" class="main-start-flex"><uni-image data-v-717eca78="" class="icon-img">
 <img src="static/image/zf1.png" draggable="false" style="opacity: 1;"></uni-image>
-<div data-v-717eca78="" class="pay-type-name">账户余额<uni-text data-v-717eca78="" class="ban-integ"><span><?php echo $user['balance'];?></span></uni-text></div>
+<div data-v-717eca78="" class="pay-type-name">Account Balance<uni-text data-v-717eca78="" class="ban-integ"><span><?php echo $user['balance'];?></span></uni-text></div>
 </div>
 <uni-radio data-v-717eca78="" style="transform: scale(0.8);">
 <div class="uni-radio-wrapper">
@@ -396,7 +396,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 </uni-radio></uni-label></uni-radio-group>
 		</div>
-<div data-v-717eca78="" class="pay-remark">若完成交易代表您已同意以下约定：<br data-v-717eca78="">1、本平台禁止未成年消费<br data-v-717eca78="">2、由于盲盒商品特殊属性，打开后不支持退款<br data-v-717eca78="">3、港澳台地区及部分偏远地区会无法配送<br data-v-717eca78=""></div>
+<div data-v-717eca78="" class="pay-remark">Completing the transaction means you agree to the following terms:<br data-v-717eca78="">1、Underage consumption is prohibited on this platform<br data-v-717eca78="">2、Due to the special nature of blind box products, refunds are not supported after opening<br data-v-717eca78="">3、Hong Kong, Macao, Taiwan and some remote areas may not be deliverable<br data-v-717eca78=""></div>
 </div>
 </div>
 </div>
@@ -404,14 +404,14 @@ for($i=0;$i<count($box);$i++){
 <div data-v-717eca78="" class="pay-confirm column-align-end-flex">
 <div data-v-717eca78="" class="pay-adult main-start-flex">
 <div data-v-717eca78="" class="xuanz" id="xy" onclick="xzxy()"></div>
-<div data-v-717eca78=""><uni-text data-v-717eca78=""><span>我已满18岁，已阅读并同意</span></uni-text><uni-text data-v-717eca78=""><span>《用户协议》</span></uni-text></div>
+<div data-v-717eca78=""><uni-text data-v-717eca78=""><span> I am over 18, have read, and agree to the</span></uni-text><uni-text data-v-717eca78=""><span>"User Agreement"</span></uni-text></div>
 </div>
 <div data-v-717eca78="" class="pay-detail main-start-flex">
 <div data-v-717eca78="" class="pay-detail-left">
 <div data-v-717eca78="">合计:￥<uni-text data-v-717eca78=""><span id="hj1"><?php echo $hj;?></span></uni-text></div>
-<div data-v-717eca78="" class="main-end-flex" id="sl1">共<?php echo $sl;?>件</div>
+<div data-v-717eca78="" class="main-end-flex" id="sl1">Total<?php echo $sl;?>Items</div>
 </div>
-<div data-v-717eca78="" class="pay-button main-center-flex" onclick="xsqr()">确认支付</div>
+<div data-v-717eca78="" class="pay-button main-center-flex" onclick="xsqr()">Confirm Payment</div>
 </div>
 </div>
 <div data-v-5d12bc44="" data-v-717eca78="" class="u-popup bg"></div>
@@ -433,10 +433,10 @@ for($i=0;$i<count($box);$i++){
 				</uni-image>
 				<div data-v-5d12bc44="" class="body main-center-flex">
 					<div data-v-5d12bc44="" class="content">
-						<div data-v-5d12bc44="" class="title main-center-flex">支付确认</div>
-						<div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span id="hj2">总价为<?php echo $hj;?></span></uni-text></div>
+						<div data-v-5d12bc44="" class="title main-center-flex">Payment Confirmation</div>
+						<div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span id="hj2">Total Price is<?php echo $hj;?></span></uni-text></div>
 						<div data-v-5d12bc44="" class="button main-center-flex">
-<div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="pay()">确定</div>
+<div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="pay()">Confirm</div>
 </div>
 					</div>
 				</div>
@@ -446,7 +446,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 
 <uni-toast id="msg" style="display: none;">
-<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> 余额不足 </p></div>
+<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> Insufficient Balance </p></div>
 </uni-toast>
 		
 		</div>
@@ -481,9 +481,9 @@ for($i=0;$i<count($box);$i++){
 			hj=sl*dj;
 			$("#sl").text(sl);
 			$("#hj").text(hj);
-			$("#sl1").text("共"+sl+"件");
+			$("#sl1").text("Total"+sl+"Items");
 			$("#hj1").text(hj);
-			$("#hj2").text("总价为"+hj);
+			$("#hj2").text("Total Price is"+hj);
 			$("#gmk").hide();
 			if($("#ddxq").is(":visible")==false){
 				$("#ddxq").show();
@@ -514,7 +514,7 @@ for($i=0;$i<count($box);$i++){
 		function xsqr(){
 			if($("#qrzf").is(":visible")==false){
 				if(xy!=1){
-					msg("请查看用户协议");
+					msg("Please review the User Agreement");
 					return false;
 				}
 				$("#qrzf").show();

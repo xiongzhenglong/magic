@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>我的订单</title>
+<title>My Orders</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="./static/index.css">
 <style type="text/css">@charset "UTF-8";
@@ -22,15 +22,15 @@ height: 60px;height: calc(60px + constant(safe-area-inset-bottom));height: calc(
 <div class="uni-page-head-hd" onclick="history.go(-1);"><div class="uni-page-head-btn"><i class="uni-btn-icon" style="color: rgb(0, 0, 0); font-size: 27px;"></i></div>
 <div class="uni-page-head-ft"></div>
 </div>
-<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"><!----> 我的订单 </div>
+<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"><!----> My Orders </div>
 </div>
 <!----><div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-placeholder"></div>
 </uni-page-head>
-<uni-page-wrapper><uni-page-body><div class="container"><div class="head"><div data-v-7a78d4df="" class="u-tabs"><div data-v-7a78d4df="" class="u-tabs__wrapper"><div data-v-7a78d4df="" class="u-tabs__wrapper__scroll-view-wrapper"><uni-scroll-view data-v-7a78d4df="" class="u-tabs__wrapper__scroll-view"><div class="uni-scroll-view"><div class="uni-scroll-view" style="overflow: hidden;"><div class="uni-scroll-view-content"><!----><div data-v-7a78d4df="" class="u-tabs__wrapper__nav"><div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-0" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="font-family: &quot;Source Han Sans CN&quot;; font-weight: 500; color: rgb(0, 0, 0);"><span>待付款</span></uni-text><!----></div>
-<div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-1" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span>待发货</span></uni-text><!----></div>
-<div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-2" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span>待收货</span></uni-text><!----></div>
+<uni-page-wrapper><uni-page-body><div class="container"><div class="head"><div data-v-7a78d4df="" class="u-tabs"><div data-v-7a78d4df="" class="u-tabs__wrapper"><div data-v-7a78d4df="" class="u-tabs__wrapper__scroll-view-wrapper"><uni-scroll-view data-v-7a78d4df="" class="u-tabs__wrapper__scroll-view"><div class="uni-scroll-view"><div class="uni-scroll-view" style="overflow: hidden;"><div class="uni-scroll-view-content"><!----><div data-v-7a78d4df="" class="u-tabs__wrapper__nav"><div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-0" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="font-family: &quot;Source Han Sans CN&quot;; font-weight: 500; color: rgb(0, 0, 0);"><span>Pending Payment</span></uni-text><!----></div>
+<div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-1" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span>Awaiting Shipment</span></uni-text><!----></div>
+<div data-v-7a78d4df="" class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-2" style="width: 25%; height: 40px; font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;"><uni-text data-v-7a78d4df="" class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span>Awaiting Delivery</span></uni-text><!----></div>
 <div data-v-7a78d4df="" class="u-tabs__wrapper__nav__line" style="width: 20px; transform: translate(52.5px); transition-duration: 300ms; height: 2px; background:  0% 0% / cover rgb(51, 51, 51);"></div>
 </div>
 </div>
@@ -41,7 +41,7 @@ height: 60px;height: calc(60px + constant(safe-area-inset-bottom));height: calc(
 </div>
 </div>
 <!----><div data-v-0d92b71b="" class="container default"><logistics data-v-0d92b71b="" wlinfo="[object Object]"></logistics><div data-v-0d92b71b="" class="img"><uni-image data-v-0d92b71b="" class="image"><div style="background-image: url(&quot;./static/img/default.44927131.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
-<!----><img src="./static/img/default.44927131.png" draggable="false"></uni-image><div data-v-0d92b71b="" class="content">暂无信息</div>
+<!----><img src="./static/img/default.44927131.png" draggable="false"></uni-image><div data-v-0d92b71b="" class="content">No Information Available</div>
 </div>
 </div>
 </div>

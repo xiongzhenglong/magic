@@ -12,7 +12,7 @@ mysqli_close($db);
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>设置</title>
+<title>Settings</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <script src="./static/js/jquery-1.7.2.js?v=2030"></script>
 <script src="./static/js/cmd.js?v=2030"></script>
@@ -34,7 +34,7 @@ mysqli_close($db);
 <div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-page-head-bd">
-<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 设置 </div>
+<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> Settings </div>
 </div>
 <div class="uni-page-head-ft"></div>
 </div>
@@ -43,24 +43,24 @@ mysqli_close($db);
 <div class="container">
 <div class="list-content">
 <div>
-<div class="list-items"><uni-text><span>头像</span></uni-text><uni-image class="head-img">
+<div class="list-items"><uni-text><span>Avatar</span></uni-text><uni-image class="head-img">
 <img src="<?php echo $user['avatar']?>" draggable="false" style="opacity: 1;"></uni-image></div>
 </div>
 <div>
-<div class="list-items"><uni-text><span>昵称</span></uni-text><uni-text><span><?php echo $user['nickname']?></span></uni-text></div>
+<div class="list-items"><uni-text><span>Nickname</span></uni-text><uni-text><span><?php echo $user['nickname']?></span></uni-text></div>
 </div>
 <div>
-<div class="list-items"><uni-text><span>手机号</span></uni-text>
+<div class="list-items"><uni-text><span>Mobile Number</span></uni-text>
 
 <div class="uni-cover-view"><uni-text><span><?php echo $user['phone']?></span></uni-text></div>
 
 </div>
 </div>
 <div>
-<div class="list-items-last"><uni-text><span>用户ID</span></uni-text><uni-text><span><?php echo $uid;?></span></uni-text></div>
+<div class="list-items-last"><uni-text><span>User ID</span></uni-text><uni-text><span><?php echo $uid;?></span></uni-text></div>
 </div>
 <div>
-<div class="list-items-last" onclick="gourl('llrj/login_out.php')"><uni-text><span>注销(清空本地缓存)</span></uni-text></div>
+<div class="list-items-last" onclick="gourl('llrj/login_out.php')"><uni-text><span>Log Out (Clear Local Cache)</span></uni-text></div>
 </div>
 </div>
 <div class="u-cell-group ugroup" style="margin-top: 15px; background: rgb(255, 255, 255); font-size: 14px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(51, 51, 51);">
@@ -70,7 +70,7 @@ mysqli_close($db);
 <div class="u-cell">
 <div class="u-cell__body">
 <div class="u-cell__body__content">
-<div class="u-cell__title"><uni-text class="u-cell__title-text"><span>用户协议</span></uni-text></div>
+<div class="u-cell__title"><uni-text class="u-cell__title-text"><span>User Agreement</span></uni-text></div>
 </div>
 <div class="cell-slot"></div>
 <div class="u-cell__right-icon-wrap u-cell__right-icon-wrap--">
@@ -86,7 +86,7 @@ mysqli_close($db);
 <div class="u-cell">
 <div class="u-cell__body">
 <div class="u-cell__body__content">
-<div class="u-cell__title"><uni-text class="u-cell__title-text"><span>隐私协议</span></uni-text></div>
+<div class="u-cell__title"><uni-text class="u-cell__title-text"><span>Privacy Policy</span></uni-text></div>
 </div>
 <div class="cell-slot"></div>
 <div class="u-cell__right-icon-wrap u-cell__right-icon-wrap--">

@@ -14,7 +14,7 @@ $czjl=runsqld($db,"select * from hm_user_balance_recharge_log where user_id='$ui
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>余额充值订单</title>
+<title>Balance Recharge Orders</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <script src="./static/js/jquery-1.10.2.js?v=2030"></script>
 <link rel="stylesheet" href="./static/index.css">
@@ -42,7 +42,7 @@ $czjl=runsqld($db,"select * from hm_user_balance_recharge_log where user_id='$ui
 <div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-page-head-bd">
-<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 余额充值订单 </div>
+<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> Balance Recharge Orders </div>
 </div>
 <div class="uni-page-head-ft"></div>
 </div>
@@ -58,9 +58,9 @@ $czjl=runsqld($db,"select * from hm_user_balance_recharge_log where user_id='$ui
 <div class="uni-scroll-view" style="overflow: hidden;">
 <div class="uni-scroll-view-content">
 <div class="u-tabs__wrapper__nav">
-<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-0" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(1)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt1">全部订单</span></uni-text></div>
-<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-1" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(2)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt2">待支付</span></uni-text></div>
-<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-2" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(3)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt3">已完成</span></uni-text></div>
+<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-0" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(1)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt1">All Orders</span></uni-text></div>
+<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-1" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(2)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt2">Pending Payment</span></uni-text></div>
+<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-2" style="width: 120px; height: 44px;font-weight: 400; color: rgb(153, 153, 153); flex: 1 1 0%;" onclick="xuanz(3)"><uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);"><span id="tt3">Completed</span></uni-text></div>
 <div id="dixian" class="u-tabs__wrapper__nav__line" style=""></div>
 </div>
 </div>
@@ -80,47 +80,47 @@ var czjl=JSON.parse('<?php echo json_encode($czjl);?>');
 console.log(czjl);
 function zffs(s){
 	if(s==1){
-		return '微信支付';
+		return 'WeChat Pay';
 	}
 	if(s==2){
-		return '支付宝支付';
+		return 'Alipay';
 	}
-	return '其他支付';
+	return 'Other Payment Methods';
 }
 function xszt(s){
 	if(s==1){
-		return '待支付';
+		return 'Pending Payment';
 	}
 	if(s==2){
-		return '支付成功';
+		return 'Payment Successful';
 	}
 	if(s==3){
-		return '支付失败';
+		return 'Payment Failed';
 	}
 	if(s==4){
-		return '过期';
+		return 'Expired';
 	}
 	if(s==5){
-		return '取消';
+		return 'Canceled';
 	}
-	return '其他错误';
+	return 'Other Error';
 }
 
 function xians(s){
 	var str='';
 	for(var i=0;i<czjl.length;i++){
 		if(1==s){
-			str+='<div><div>单号:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">额度:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">时间：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
+			str+='<div><div>Order Number:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">Amount:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">Time：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
 		}
 		if(2==s && czjl[i]['status']!=2){
-			str+='<div><div>单号:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">额度:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">时间：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
+			str+='<div><div>Order Number:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">Amount:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">Time：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
 		}
 		if(3==s && czjl[i]['status']==2){
-			str+='<div><div>单号:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">额度:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">时间：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
+			str+='<div><div>Order Number:'+czjl[i]['pay_no']+'</div><div style="display: flex;width: 100%;"><div style="width: 75%;">'+zffs(czjl[i]['pay_way'])+'</div><div style="text-align: right;">Amount:'+czjl[i]['amount']+'</div></div><div style="display: flex;width: 100%;"><div style="width: 75%;">Time：'+czjl[i]['update_time']+'</div><div style="text-align: right;">'+xszt(czjl[i]['status'])+'</div></div></div>';
 		}
 	}
 	if(str==''){
-		$("#nrk").html('<div class="img"><uni-image class="image"><img src="./static/img/default.44927131.png" draggable="false" style="opacity: 1;"></uni-image><div class="content">暂无信息</div></div>');
+		$("#nrk").html('<div class="img"><uni-image class="image"><img src="./static/img/default.44927131.png" draggable="false" style="opacity: 1;"></uni-image><div class="content">No Information Available</div></div>');
 	}else{
 		$("#nrk").html('<div style="padding: 10px;background-color: #f6fffe;border-radius: 5px;">'+str+'</div>');
 	}

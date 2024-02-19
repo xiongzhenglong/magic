@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>账户余额</title>
+<title>Account Balance</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="./static/index.css">
 <script src="./static/js/cmd.js?v=2030"></script>
@@ -19,7 +19,7 @@ left:-49px}.recharge{width:76px;height:27px;background-color:#fff0cd;text-align:
 <div class="uni-page-head-ft"></div>
 </div>
 <div class="uni-page-head-bd">
-<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 账户余额 </div>
+<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> Account Balance </div>
 </div>
 
 <div class="uni-page-head-ft"></div>
@@ -30,25 +30,25 @@ left:-49px}.recharge{width:76px;height:27px;background-color:#fff0cd;text-align:
 <div class="container">
 <div class="head" style="background-image: url(&quot;front/banlance-bg.png&quot;);">
 <div class="head-title">
-<div class="banlance">账户余额（元）</div>
-<div class="recharge" onclick="gourl('banlan.php')">充值</div>
+<div class="banlance">Account Balance (CNY)</div>
+<div class="recharge" onclick="gourl('banlan.php')">Recharge</div>
 </div>
 <div class="head-content">
 <div class="banlan-num">0.00</div>
 </div>
 <div class="head-title">
 <div class="banlance total-rech">
-<div>累计充值（元 ）</div>
+<div>Total Recharge (CNY)</div>
 <div class="banlan-num">0</div>
 </div>
 <div class="banlance total-rech">
-<div>累计消费(元)</div>
+<div>Total Expenditure (CNY)</div>
 <div class="banlan-num">0</div>
 </div>
 </div>
 </div>
 <div class="history common">
-<div class="his-log">历史记录</div>
+<div class="his-log">History Records</div>
 <div class="common date"><uni-text><span>2023-09</span></uni-text>
 <div class="u-popup"></div>
 <div class="u-icon u-icon--right"><uni-text hover-class="" class="u-icon__icon uicon-arrow-right" style="font-size: 16px; line-height: 16px; font-weight: normal; top: 0px; color: rgb(96, 98, 102);"><span></span></uni-text></div>
@@ -56,9 +56,9 @@ left:-49px}.recharge{width:76px;height:27px;background-color:#fff0cd;text-align:
 </div>
 <div class="tab">
 <div class="tab-list">
-<div class="tab-all com activeAll">全部</div>
-<div class="tab-all com">充值</div>
-<div class="tab-all com">消费</div>
+<div class="tab-all com activeAll">All</div>
+<div class="tab-all com">Recharge</div>
+<div class="tab-all com">Expenditure</div>
 </div>
 </div>
 <div class="list"></div>

@@ -47,7 +47,7 @@ for($i=0;$i<count($it);$i++){
 <div class="goods-item-image"><uni-image class="goods-img"><img src="'.$it[$i]['image'].'" draggable="false" style="opacity:1"></uni-image></div>
 <div class="goods-item-name text-ellipsis_2">'.mb_substr($it[$i]['name'], 0, 24, 'utf-8').'</div>
 <div class="market-price"><uni-text data-v-97c3fd1c=""><span>￥</span></uni-text>'.$it[$i]['price'].'</div>
-<div class="market-hash-coin">'.$it[$i]['integral_price'].'<uni-text data-v-97c3fd1c=""><span>哈希币</span></uni-text></div>
+<div class="market-hash-coin">'.$it[$i]['integral_price'].'<uni-text data-v-97c3fd1c=""><span>Hash Coins</span></uni-text></div>
 </div>';
 }
 

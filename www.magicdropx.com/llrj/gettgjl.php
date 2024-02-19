@@ -75,11 +75,11 @@ $str='<div style="border-top: 3px solid #00c0ef;border-radius: 3px;background: #
 							<div style=" width: 100%; padding-top: 5px;">
 								<table style="margin-left: 0px; width: 100%;">
 									<tr role="row">
-										<th rowspan="1" colspan="1">账号</th>
-										<th rowspan="1" colspan="1">时间</th>
-										<th rowspan="1" colspan="1">推广奖励</th>
-										<th rowspan="1" colspan="1">详情</th>
-										<th rowspan="1" colspan="1">说明</th>
+										<th rowspan="1" colspan="1">Account</th>
+										<th rowspan="1" colspan="1">Time</th>
+										<th rowspan="1" colspan="1">Promotion Reward</th>
+										<th rowspan="1" colspan="1">Details</th>
+										<th rowspan="1" colspan="1">Description</th>
 									</tr>'.$str.'</table>
 							</div>
 						</div>
@@ -88,17 +88,17 @@ $str='<div style="border-top: 3px solid #00c0ef;border-radius: 3px;background: #
 						
 
 	<div>
-		<div style="color: #737373;text-align: center;">当前为第'.($kaishi+1).' - '.$pagesize.' 条记录,共 '.$nums.' 条</div>
+		<div style="color: #737373;text-align: center;">Currently showing records'.($kaishi+1).' - '.$pagesize.' ,total '.$nums.' records</div>
 	</div>
 	<input id="page" name="page" type="hidden" value="'.$page.'">
 
 		<div style="padding-bottom: 5px;">
 			<ul class="pagination">
-			<li class="paginate_button first" id="example1_first"><a href="javascript:void(0);" onclick="gettgjl(0)">首页</a></li>
-			<li class="paginate_button previous" id="example1_previous"><a href="javascript:void(0);" onclick="gettgjl('.($page-1).')">上一页 </a></li>
+			<li class="paginate_button first" id="example1_first"><a href="javascript:void(0);" onclick="gettgjl(0)">First Page</a></li>
+			<li class="paginate_button previous" id="example1_previous"><a href="javascript:void(0);" onclick="gettgjl('.($page-1).')">Previous Page </a></li>
 			'.$s1.'
-			<li class="paginate_button next" id="example1_next"><a href="javascript:void(0);" onclick="gettgjl('.($page+1).')">下一页 </a></li>
-			<li class="paginate_button last" id="example1_last"><a href="javascript:void(0);" onclick="gettgjl('.$pages.')">尾页 </a></li>
+			<li class="paginate_button next" id="example1_next"><a href="javascript:void(0);" onclick="gettgjl('.($page+1).')">Next Page </a></li>
+			<li class="paginate_button last" id="example1_last"><a href="javascript:void(0);" onclick="gettgjl('.$pages.')">Last Page </a></li>
 			</ul>
 
 		</div>

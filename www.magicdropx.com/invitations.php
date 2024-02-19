@@ -22,7 +22,7 @@ function getxs($a,$b){
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>邀请有奖</title>
+<title>Invite and Earn Rewards</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <link rel="stylesheet" href="./static/index.css">
 <script src="./static/js/jquery-1.7.2.js?v=2030"></script>
@@ -103,37 +103,37 @@ th
 		</div>
 	</div>
 	<div style="width: 100%;text-align: center;">
-		<div style="font-size: 16px;"> 邀请有奖 </div>
+		<div style="font-size: 16px;"> Invite and Earn Rewards </div>
 	</div>
 </div>
 
 <div style="border-bottom: 1px solid #b7b7b7;padding-top: 10px;">
 	<ul>
-	<li><div class="daohan" onclick="xze(1)">首页</div></li>
-	<li><div class="daohan" onclick="xze(2)">推广记录</div></li>
-	<li><div class="daohan" onclick="xze(3)">推广用户</div></li>
+	<li><div class="daohan" onclick="xze(1)">Home</div></li>
+	<li><div class="daohan" onclick="xze(2)">Promotion Records</div></li>
+	<li><div class="daohan" onclick="xze(3)">Promoted Users</div></li>
 	 </ul>
 </div>
 <div id="xz1" style="padding: 10px 10px 0px;background-color: #ffffff;display: <?php echo getxs('1',$xz)?>;">
-	<div style="height: 30px;line-height: 30px;">账户:<?php echo $uname?></div>
+	<div style="height: 30px;line-height: 30px;">Account:<?php echo $uname?></div>
 <?
 $sql="select * from tgjl where name='$uname' order by id desc";
 $conn=mysqli_query($db,$sql);
 $nums=mysqli_num_rows($conn);//取得总记录数
 
 ?>
-		<div style="height: 30px;line-height: 30px;">总业绩: <?php echo $nums?>笔</div>
+		<div style="height: 30px;line-height: 30px;">Total Performance: <?php echo $nums?>Transactions</div>
 
-		<div style="height: 30px;line-height: 30px;">可领取金币:<?php echo $user['jl']?> <a href="Account/js.php?act=lq">领取</a></div>
+		<div style="height: 30px;line-height: 30px;">Coins Available for Collection:<?php echo $user['jl']?> <a href="Account/js.php?act=lq">Claim</a></div>
 
 	<div style="">
 		<p style="height: 30px;line-height: 30px;">
-			1、推广代码 <input id="myurl" name="myurl" readonly="readonly" style="" type="text" value="<?echo 'http://'.$_SERVER['HTTP_HOST'].'?'.$uid;?>" />
-			<button id="copy" title="复制到剪切板" data-clipboard-target="myurl" onclick="copyText('myurl')"><b>复制链接</b></button>
+			1、Promotion Code <input id="myurl" name="myurl" readonly="readonly" style="" type="text" value="<?echo 'http://'.$_SERVER['HTTP_HOST'].'?'.$uid;?>" />
+			<button id="copy" title="Copy to Clipboard" data-clipboard-target="myurl" onclick="copyText('myurl')"><b>Copy Link</b></button>
 		</p>
 		<div id="d_debug" style="height: 30px;line-height: 30px;text-align: center;display: none;"></div>
 		<p style="height: 30px;line-height: 30px;">
-			2、推广二维码,您可以保存以下图片发给别人<br />
+			2、Promotion QR Code,You can save the image below to send to others<br />
 			<div id="output" style="text-align: center;padding: 10px;"></div>
 		</p>
 	</div>
@@ -173,7 +173,7 @@ function copyText(id){
   var copyTarget = document.getElementById(id);
   copyTarget.select();
   document.execCommand("copy");
-  $("#d_debug").text('复制成功');
+  $("#d_debug").text('Copied Successfully');
   $("#d_debug").show();
   //alert("已复制到剪贴板");
 }

@@ -11,7 +11,7 @@ $item=runsql($db,"select * from hm_goods where id='$gid' order by id asc");
 <html lang="zh-CN" style="--status-bar-height:0px; --top-window-height:0px; --window-left:0px; --window-right:0px; --window-margin:0px; --window-top:calc(var(--top-window-height) + calc(44px + env(safe-area-inset-top))); --window-bottom:0px;"><head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>商品详情</title>
+		<title>Product Details</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 		<link rel="stylesheet" href="./static/index.css">
 		<script src="./static/js/jquery-1.7.2.js?v=2030"></script>
@@ -77,7 +77,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-44254ce5]:
 						</div>
 						<div class="uni-page-head-bd">
 							<div class="uni-page-head__title" style="font-size: 16px; opacity: 1;">
-								 商品详情 </div>
+								 Product Details </div>
 						</div>
 						
 						<div class="uni-page-head-ft"></div>
@@ -106,11 +106,11 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-44254ce5]:
 </div>
 </div>
 <div data-v-05688efe="" class="market-info">
-<div data-v-05688efe="" class="market-price"><uni-text data-v-05688efe=""><span>￥</span></uni-text><uni-text data-v-05688efe=""><span><?php echo $item['price'];?></span></uni-text><uni-text data-v-05688efe=""><span><?php echo $item['integral_price'];?></span></uni-text><uni-text data-v-05688efe=""><span>哈希币</span></uni-text></div>
+<div data-v-05688efe="" class="market-price"><uni-text data-v-05688efe=""><span>￥</span></uni-text><uni-text data-v-05688efe=""><span><?php echo $item['price'];?></span></uni-text><uni-text data-v-05688efe=""><span><?php echo $item['integral_price'];?></span></uni-text><uni-text data-v-05688efe=""><span>Hash Coins</span></uni-text></div>
 <div data-v-05688efe="" class="market-name text-ellipsis_2"><?php echo $item['name'];?></div>
 </div>
 <div data-v-05688efe="" class="market-detail">
-<div data-v-05688efe="" class="market-detail-title main-start-flex">商品详情</div>
+<div data-v-05688efe="" class="market-detail-title main-start-flex">Product Details</div>
 <div data-v-05688efe=""><uni-rich-text data-v-05688efe="">
 <div style="position: relative;"><p data-v-05688efe=""><img data-v-05688efe="" style="max-width: 100%;" src="<?php echo $item['image'];?>"></p><uni-resize-sensor>
 <div>
@@ -123,7 +123,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-44254ce5]:
 </uni-rich-text></div>
 </div>
 <div data-v-05688efe="" class="market-footer market-change" onclick="xsgm()">
-<div data-v-05688efe="" class="market-footer-button main-center-flex">哈希币分解</div>
+<div data-v-05688efe="" class="market-footer-button main-center-flex">Hash Coin Breakdown</div>
 </div>
 
 </div>
@@ -145,12 +145,12 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-44254ce5]:
 <div class="text-ellipsis_2"><?php echo $item['name'];?></div>
 <div>￥<?php echo $item['price'];?></div>
 <div><?php echo $item['integral_price'];?>
-						哈希币</div>
+						Hash Coins</div>
 </div>
 </div>
 <div class="goods-specifications"></div>
 <div class="buy-num main-space-between">
-<div>购买数量</div>
+<div>Purchase Quantity</div>
 <div>
 <div data-v-44254ce5="" class="u-number-box">
 <div data-v-44254ce5="" class="u-number-box__minus u-number-box__minus--disabled" style="background-color: rgb(247, 248, 250); height: 30px; color: rgb(50, 50, 51);"><div data-v-59765974="" data-v-44254ce5="" class="u-icon u-icon--right"><uni-text data-v-59765974="" hover-class="" class="u-icon__icon uicon-minus" style="font-size: 15px; line-height: 15px; font-weight: bold; top: 0px; color: rgb(200, 201, 204);" onclick="jians()"><span></span></uni-text></div></div>
@@ -165,7 +165,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-44254ce5]:
 </div>
 </div>
 </div>
-	<div class="confirm-buy main-center-flex" style="background: rgb(63, 63, 66);" onclick="pay()">确定</div>
+	<div class="confirm-buy main-center-flex" style="background: rgb(63, 63, 66);" onclick="pay()">Confirm</div>
 </div>
 </div>
 </div>

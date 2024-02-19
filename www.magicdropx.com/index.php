@@ -404,13 +404,13 @@ while($rs=mysqli_fetch_array($sql1)){
 					<div class="daily-receive">
 						<div class="left-area">
 							<uni-text class="daily-text1">
-								<span>每日必领</span>
+								<span>Daily Must Receive</span>
 							</uni-text>
 							<uni-text class="daily-text2">
-								<span>单日消费满198元，即可领取相关权益</span>
+								<span>Spend 198 RMB in a single day to receive related benefits</span>
 							</uni-text>
 						</div>
-						<div class="rules column-center-flex">活动规则</div>
+						<div class="rules column-center-flex">Activity Rules</div>
 					</div>
 					<div class="content-class">
 						<div class="task-progress">
@@ -420,7 +420,7 @@ while($rs=mysqli_fetch_array($sql1)){
 									<span>14 : 08 : 00</span>
 								</uni-text>
 								<uni-text class="text">
-									<span>后重置</span>
+									<span>Reset After</span>
 								</uni-text>
 							</div>
 							<div class="consume-class">
@@ -439,19 +439,19 @@ while($rs=mysqli_fetch_array($sql1)){
 									</div>
 								</div>
 								<div class="price-class">
-									<div class="common-consume">已消费0元</div>
+									<div class="common-consume">0 RMB Spent</div>
 								</div>
 							</div>
 							<div class="consume-view no-consume" style="background-image: url(&quot;static/image/no-consume.png&quot;);">
 								<div class="inner-consume">
 									<uni-text >
-										<span>还差</span>
+										<span></span>
 									</uni-text>
 									<uni-text class="has-text">
 										<span>198.00</span>
 									</uni-text>
 									<uni-text >
-										<span>元即可领取奖励</span>
+										<span>RMB More to Receive Rewards</span>
 									</uni-text>
 								</div>
 							</div>
@@ -463,13 +463,13 @@ while($rs=mysqli_fetch_array($sql1)){
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
 										<div class="title-view-class">
 											<uni-text class="title-class">
-												<span>达到</span>
+												<span>Reach</span>
 											</uni-text>
 											<uni-text class="title-class amount-class">
 												<span>198</span>
 											</uni-text>
 											<uni-text class="title-class">
-												<span>元领取</span>
+												<span>RMB to Receive</span>
 											</uni-text>
 										</div>
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
@@ -479,13 +479,13 @@ while($rs=mysqli_fetch_array($sql1)){
 												<div style="background-image: url(&quot;static/image/coupons/coupons1.png&quot;); background-position: center center; background-size: contain; background-repeat: no-repeat;width: 77px;height: 55px;"></div>
 											<div class="coupons-text">
 												<uni-text class="coupons-text1">
-													<span>每日任务8元游优惠券*1</span>
+													<span>Daily Task 8 Yuan Game Coupon *1</span>
 												</uni-text>
 												<uni-text class="coupons-detail">
-													<span>查看详情&gt;</span>
+													<span>View Details&gt;</span>
 												</uni-text>
 											</div>
-											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">未解锁</div>
+											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">Not Unlocked</div>
 										</div>
 									</div>
 								</div>
@@ -494,13 +494,13 @@ while($rs=mysqli_fetch_array($sql1)){
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
 										<div class="title-view-class">
 											<uni-text class="title-class">
-												<span>达到</span>
+												<span>Reach</span>
 											</uni-text>
 											<uni-text class="title-class amount-class">
 												<span>598</span>
 											</uni-text>
 											<uni-text class="title-class">
-												<span>元领取</span>
+												<span>RMB to Receive</span>
 											</uni-text>
 										</div>
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
@@ -510,11 +510,11 @@ while($rs=mysqli_fetch_array($sql1)){
 												<div style="background-image: url(&quot;static/image/coupons/coupons2.png&quot;); background-position: center center; background-size: contain; background-repeat: no-repeat;width: 77px;height: 55px;"></div>
 											<div class="coupons-text">
 												<uni-text class="coupons-text1">
-													<span>重抽卡*2</span>
+													<span>Redraw Card *2</span>
 												</uni-text>
 												
 											</div>
-											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">未解锁</div>
+											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">Not Unlocked</div>
 										</div>
 									</div>
 								</div>
@@ -523,13 +523,13 @@ while($rs=mysqli_fetch_array($sql1)){
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
 										<div class="title-view-class">
 											<uni-text class="title-class">
-												<span>达到</span>
+												<span>Reach</span>
 											</uni-text>
 											<uni-text class="title-class amount-class">
 												<span>998</span>
 											</uni-text>
 											<uni-text class="title-class">
-												<span>元领取</span>
+												<span>RMB to Receive</span>
 											</uni-text>
 										</div>
 											<div style="background-image: url(&quot;static/image/star.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;width: 7px;height: 9px;"></div>
@@ -539,11 +539,11 @@ while($rs=mysqli_fetch_array($sql1)){
 												<div style="background-image: url(&quot;static/image/coupons/balance.png&quot;); background-position: center center; background-size: contain; background-repeat: no-repeat;width: 77px;height: 55px;"></div>
 											<div class="coupons-text">
 												<uni-text class="coupons-text1">
-													<span>余额*19</span>
+													<span>Balance *19</span>
 												</uni-text>
 												
 											</div>
-											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">未解锁</div>
+											<div class="lock-img lock-class other-img" style="background-image: url(&quot;static/image/coupons/lock-back.png&quot;);">Not Unlocked</div>
 										</div>
 									</div>
 								</div>
@@ -573,13 +573,13 @@ while($rs=mysqli_fetch_array($sql1)){
 													<div class="u-tabs__wrapper__nav">
 														<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-0" style="width: 50%; height: 44px; font-size: 15px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(34, 18, 60);">
 															<uni-text class="u-tabs__wrapper__nav__item__text" style="font-family: &quot;Source Han Sans CN&quot;; font-weight: 500; color: rgb(34, 18, 60);">
-																<span>日榜</span>
+																<span>Daily Ranking</span>
 															</uni-text>
 															
 														</div>
 														<div class="u-tabs__wrapper__nav__item u-tabs__wrapper__nav__item-1" style="width: 50%; height: 44px; font-size: 15px; font-family: &quot;Source Han Sans CN&quot;; font-weight: 400; color: rgb(34, 18, 60);">
 															<uni-text class="u-tabs__wrapper__nav__item__text" style="color: rgb(96, 98, 102);">
-																<span>周榜</span>
+																<span>Weekly Ranking</span>
 															</uni-text>
 															
 														</div>
@@ -592,29 +592,29 @@ while($rs=mysqli_fetch_array($sql1)){
 								</div>
 							</div>
 						</div>
-						<div class="period"><div class="title">上期TOP3</div><div class="content"><div class="rank-container column-center-flex second-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/two.png&quot;);">
+						<div class="period"><div class="title">Last Period TOP3</div><div class="content"><div class="rank-container column-center-flex second-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/two.png&quot;);">
 						<img src="static/image/avatar-2.png" draggable="false">
 						
-						<div>2</div></div><div class="rank-text text-2"><div>42001荣誉值</div><div>13103711111</div></div></div><div class="rank-container column-center-flex first-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/one.png&quot;);">
+						<div>2</div></div><div class="rank-text text-2"><div>42001Honor Value</div><div>13103711111</div></div></div><div class="rank-container column-center-flex first-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/one.png&quot;);">
 						<img src="static/image/avatar-3.png" draggable="false">
 						
-						<div>1</div></div><div class="rank-text text-1"><div>148600荣誉值</div><div>hjk</div></div></div><div class="rank-container column-center-flex third-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/three.png&quot;);">
+						<div>1</div></div><div class="rank-text text-1"><div>148600Honor Value</div><div>hjk</div></div></div><div class="rank-container column-center-flex third-view"><div class="rank-img" style="background-image: url(&quot;static/image/home/three.png&quot;);">
 						<img src="static/image/avatar-3.png" draggable="false">
-						<div>3</div></div><div class="rank-text text-3"><div>42001荣誉值</div><div>15696586164</div></div></div></div></div>
+						<div>3</div></div><div class="rank-text text-3"><div>42001Honor Value</div><div>15696586164</div></div></div></div></div>
 					</div>
 					<div class="bottom-area">
 						<uni-scroll-view class="scroll-view"><div class="uni-scroll-view"><div class="uni-scroll-view" style="overflow: hidden auto;"><div class="uni-scroll-view-content"><div class="">
-						<div class="rank-list" style="background-color: rgb(250, 241, 255);"><div class="bk-rank" style="color: rgb(244, 225, 255);">TOP1</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/one-rank.png&quot;);"><uni-text class="first"><span>1</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-3.png" draggable="false"></uni-image><div class="user-name">hjk</div></div><div class="right-area"><uni-text><span>荣誉值</span></uni-text><uni-text><span>148600</span></uni-text></div></div></div>
-						<div class="rank-list" style="background-color: rgb(235, 249, 255);"><div class="bk-rank" style="color: rgb(212, 242, 255);">TOP2</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/two-rank.png&quot;);"><uni-text class="second"><span>2</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-2.png" draggable="false"></uni-image><div class="user-name">13103711111</div></div><div class="right-area"><uni-text><span>荣誉值</span></uni-text><uni-text><span>42001</span></uni-text></div></div></div>
-						<div class="rank-list" style="background-color: rgb(255, 249, 249);"><div class="bk-rank" style="color: rgb(255, 241, 245);">TOP3</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/three-rank.png&quot;);"><uni-text class="third"><span>3</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-3.png" draggable="false"></uni-image><div class="user-name">15696586164</div></div><div class="right-area"><uni-text><span>荣誉值</span></uni-text><uni-text><span>42001</span></uni-text></div></div></div>
+						<div class="rank-list" style="background-color: rgb(250, 241, 255);"><div class="bk-rank" style="color: rgb(244, 225, 255);">TOP1</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/one-rank.png&quot;);"><uni-text class="first"><span>1</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-3.png" draggable="false"></uni-image><div class="user-name">hjk</div></div><div class="right-area"><uni-text><span>Honor Value</span></uni-text><uni-text><span>148600</span></uni-text></div></div></div>
+						<div class="rank-list" style="background-color: rgb(235, 249, 255);"><div class="bk-rank" style="color: rgb(212, 242, 255);">TOP2</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/two-rank.png&quot;);"><uni-text class="second"><span>2</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-2.png" draggable="false"></uni-image><div class="user-name">13103711111</div></div><div class="right-area"><uni-text><span>Honor Value</span></uni-text><uni-text><span>42001</span></uni-text></div></div></div>
+						<div class="rank-list" style="background-color: rgb(255, 249, 249);"><div class="bk-rank" style="color: rgb(255, 241, 245);">TOP3</div><div class="rank-item"><div class="left-area main-center-flex"><div class="avatar-class" style="background-image: url(&quot;static/image/home/three-rank.png&quot;);"><uni-text class="third"><span>3</span></uni-text></div></div><div class="middle-area"><uni-image class="avatar"><img src="static/image/avatar-3.png" draggable="false"></uni-image><div class="user-name">15696586164</div></div><div class="right-area"><uni-text><span>Honor Value</span></uni-text><uni-text><span>42001</span></uni-text></div></div></div>
 						</div></div></div></div></uni-scroll-view>
 						<div class="item-view">
 							<div class="rank-item-self">
 								<div class="left-area column-center-flex">
 									<uni-text class="title_1">
-										<span>我的排名:</span>
+										<span>My Ranking:</span>
 									</uni-text>
-									<uni-text class="rank-title"><span>未上榜</span></uni-text>
+									<uni-text class="rank-title"><span>Not Listed</span></uni-text>
 									
 								</div>
 								<div class="middle-area">
@@ -625,7 +625,7 @@ while($rs=mysqli_fetch_array($sql1)){
 								</div>
 								<div class="right-area">
 									<uni-text>
-										<span>荣誉值</span>
+										<span>Honor Value</span>
 									</uni-text>
 									<uni-text>
 										<span>0</span>
@@ -642,7 +642,7 @@ while($rs=mysqli_fetch_array($sql1)){
 	
 		<div id="swmb" class="u-transition u-fade-zoom-enter-to u-fade-zoom-enter-active" style="position: fixed;background-color: rgba(0, 0, 0, 0.4);z-index: 9;width: 100%;display: block;height: 100%;visibility: hidden;top: 0px;">
 		<div name="mask1" style="position: fixed;background-color: rgba(0, 0, 0, 0.4);z-index: 9;width: 100%;display: block;height: 100%;" onclick="rwux()"></div>
-		<div class="u-popup__content" style="border-radius: 14px;z-index: 10;margin-top: 50%;margin-left: 50%;left: -174px;"><div class="play-container" style="background-image: url(&quot;static/image/home/free-play-back.png&quot;);"><uni-image class="free-img"><div style="background-image: url(&quot;static/image/home/free-play-img.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="static/image/home/free-play-img.png" draggable="false"></uni-image><div class="free-title column-center-flex" style="background-image: url(&quot;static/image/home/free-play-title.png&quot;);"><div data-v-16458fbc="">demo</div><div data-v-16458fbc="">HASHMART</div></div><div class="top-area">trendy products</div><div class="middle-area"><div class="list-content"><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);"><div class="option-text" onclick="gourl('play.php')">Open a blind box</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">欧气三连</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">霸气五连</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">豪气十连</div></div></div></div><div class="bottom-area main-center-flex">Game trial, results for reference only</div></div></div></div>
+		<div class="u-popup__content" style="border-radius: 14px;z-index: 10;margin-top: 50%;margin-left: 50%;left: -174px;"><div class="play-container" style="background-image: url(&quot;static/image/home/free-play-back.png&quot;);"><uni-image class="free-img"><div style="background-image: url(&quot;static/image/home/free-play-img.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="static/image/home/free-play-img.png" draggable="false"></uni-image><div class="free-title column-center-flex" style="background-image: url(&quot;static/image/home/free-play-title.png&quot;);"><div data-v-16458fbc="">demo</div><div data-v-16458fbc="">HASHMART</div></div><div class="top-area">trendy products</div><div class="middle-area"><div class="list-content"><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);"><div class="option-text" onclick="gourl('play.php')">Open a blind box</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">European Style Triple</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">Domineering Five in a Row</div></div><div class="option-class main-center-flex" style="background-image: url(&quot;static/image/home/free-play-options.png&quot;);display: none;"><div class="option-text">Luxury Ten in a Row</div></div></div></div><div class="bottom-area main-center-flex">Game trial, results for reference only</div></div></div></div>
 	
 	
 	

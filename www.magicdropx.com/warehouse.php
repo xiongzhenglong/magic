@@ -112,9 +112,9 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-6e5fb1c2]:
 </div>
 <div class="sort-container main-space-between" id="ck">
 	<div class="sort-item main-center-flex sort-item-active" onclick="xzck(1)" id="hz1">In the box</div>
-	<div class="sort-item main-center-flex" onclick="xzck(2)" id="hz2">已分解</div>
-	<div class="sort-item main-center-flex" onclick="xzck(3)" id="hz3">已提货</div>
-	<div class="sort-item main-center-flex" onclick="xzck(0)" id="hz0">全部</div>
+	<div class="sort-item main-center-flex" onclick="xzck(2)" id="hz2">Decomposed</div>
+	<div class="sort-item main-center-flex" onclick="xzck(3)" id="hz3">Picked Up</div>
+	<div class="sort-item main-center-flex" onclick="xzck(0)" id="hz0">All</div>
 </div>
 <uni-scroll-view class="list" style="height: calc(100vh - 140px);">
 <div class="uni-scroll-view">
@@ -149,7 +149,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-6e5fb1c2]:
 <div data-v-5d12bc44="" class="button main-center-flex">
 <div data-v-5d12bc44="" class="button_1 main-center-flex">确定</div></div></div></div></div></div></div></div></div> -->
 <uni-toast id="msg" style="display: none;">
-<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> 余额不足 </p></div>
+<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> Insufficient Balance </p></div>
 </uni-toast>
 </div>
 </uni-page-body>
@@ -191,7 +191,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-6e5fb1c2]:
 function ycfj(i){
 	if($("#fj").is(":visible")==false){
 		if(i>-1){
-			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);" onclick="ycfj(0)"></div><div style="z-index: 10075; position: fixed; display: flex; bottom: 0px; left: 0px; right: 0px;"><div><div class="operation-container"><div class="operation-head main-start-flex"><div class="operation-image"><div><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+ckxx[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="operation-info column-align-start-flex"><div class="text-ellipsis_2">'+ckxx[i]['goods_name']+'</div><div>分解哈希币<uni-text><span>'+ckxx[i]['recovery_price']+'</span></uni-text></div></div></div><div class="operation-body" style="background: rgb(250, 249, 249);"><div>分解说明</div><uni-text><span>1、不喜欢的商品可分解平台哈希币 (哈希币是作为平台分解商品的媒介)<br>					2、哈希币一旦分解，不可转让，不可提现<br>					3、哈希币的所属解释权归平台所有，有疑问请联系客服<br>					4、哈希币的分解数量根据商品市场成本实时变化</span></uni-text></div><div class="operation-foot main-center-flex" onclick="fenjie('+ckxx[i]['id']+')">确认分解</div></div><div class="u-popup__content__close u-popup__content__close--top-right"></div></div></div>';
+			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);" onclick="ycfj(0)"></div><div style="z-index: 10075; position: fixed; display: flex; bottom: 0px; left: 0px; right: 0px;"><div><div class="operation-container"><div class="operation-head main-start-flex"><div class="operation-image"><div><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+ckxx[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="operation-info column-align-start-flex"><div class="text-ellipsis_2">'+ckxx[i]['goods_name']+'</div><div>Decompose Hash Coins<uni-text><span>'+ckxx[i]['recovery_price']+'</span></uni-text></div></div></div><div class="operation-body" style="background: rgb(250, 249, 249);"><div>Decomposition Instructions</div><uni-text><span>1、Unwanted items can be decomposed into platform Hash Coins (Hash Coins are used as a medium for decomposing items on the platform)<br>					2、Once Hash Coins are decomposed, they cannot be transferred or withdrawn<br>					3、The right to interpret Hash Coins belongs to the platform，If you have questions, please contact customer service<br>					4、The number of Hash Coins obtained from decomposition varies with the real-time market cost of the product</span></uni-text></div><div class="operation-foot main-center-flex" onclick="fenjie('+ckxx[i]['id']+')">Confirm Decomposition</div></div><div class="u-popup__content__close u-popup__content__close--top-right"></div></div></div>';
 			$("#fj").html(html);
 		}
 		$("#fj").show();

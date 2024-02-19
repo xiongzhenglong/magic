@@ -12,7 +12,7 @@ $dz=runsql($db,"select * from hm_user_address where user_id='$uid' and default_f
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>订单确认</title>
+<title>Order Confirmation</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <script src="./static/js/jquery-1.7.2.js?v=2030"></script>
 <script src="./static/js/cmd.js?v=2030"></script>
@@ -53,7 +53,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-5302c461]:
 <div data-v-5302c461="" onclick="history.go(-1);" class="u-navbar__content__left">
 <div data-v-59765974="" data-v-5302c461="" class="u-icon u-icon--right"><uni-text data-v-59765974="" hover-class="" class="u-icon__icon uicon-arrow-left" style="font-size: 20px; line-height: 20px; font-weight: normal; top: 0px; color: rgb(48, 49, 51);"><span></span></uni-text></div>
 </div>
-<uni-text data-v-5302c461="" class="u-line-1 u-navbar__content__title" style="width: 200px;"><span>订单确认</span></uni-text></div>
+<uni-text data-v-5302c461="" class="u-line-1 u-navbar__content__title" style="width: 200px;"><span>Order Confirmation</span></uni-text></div>
 </div>
 </div>
 <div class="head">
@@ -70,7 +70,7 @@ if($dz){
 </div>';
 }else{
 	echo '<div class="head-title">
-<div class="head-name">请先添加地址</div>
+<div class="head-name">Please Add Address First</div>
 </div>';
 }
 ?>
@@ -91,46 +91,46 @@ if($dz){
 </div>
 </div>
 </div>
-<div class="pay-info-item main-space-between"><uni-text><span>数量</span></uni-text><uni-text><span>x<?php echo $s;?></span></uni-text></div>
+<div class="pay-info-item main-space-between"><uni-text><span>Quantity</span></uni-text><uni-text><span>x<?php echo $s;?></span></uni-text></div>
 <div data-v-2f0e5305="" class="u-line" style="margin: 0px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); width: 100%; transform: scaleY(0.5); border-top-color: rgba(0, 0, 0, 0.1); border-right-color: rgba(0, 0, 0, 0.1); border-left-color: rgba(0, 0, 0, 0.1);"></div>
-<div class="pay-info-item main-space-between"><uni-text><span>合计</span></uni-text>
-<div class="pay-info-item-price"><?php echo round($item['integral_price']*$s,2);?><uni-text class="text-color"><span>哈希币</span></uni-text></div>
+<div class="pay-info-item main-space-between"><uni-text><span>Total</span></uni-text>
+<div class="pay-info-item-price"><?php echo round($item['integral_price']*$s,2);?><uni-text class="text-color"><span>Hash Coins</span></uni-text></div>
 </div>
 </div>
 <div class="pay-type">
-<div class="pay-type-head main-start-flex">支付方式</div>
+<div class="pay-type-head main-start-flex">Payment Method</div>
 <uni-radio-group><uni-label class="pay-type-item main-space-between uni-label-pointer">
 <div class="main-start-flex"><uni-image class="icon-img">
 <div style="background-image: url(&quot;static/image/t3.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
 <img src="static/image/t3.png" draggable="false"></uni-image>
-<div class="pay-type-name">哈希币</div>
+<div class="pay-type-name">Hash Coins</div>
 </div>
 <uni-radio style="transform: scale(0.8);">
 <div class="uni-radio-wrapper">
 <div class="uni-radio-input uni-radio-input-checked" style="background-color: rgb(235, 92, 74); border-color: rgb(235, 92, 74);"></div>
 </div>
 </uni-radio></uni-label></uni-radio-group></div>
-<div class="pay-remark">若完成交易代表您已同意以下约定：<br>1、商品的实时价格会因市场波动而产生变化，具体成交价以平台为准。<br>2、由于显示器，拍照和做图的过程中，产品可能发生颜色偏差，具体请以实物为准！<br></div>
+<div class="pay-remark">Completing the transaction indicates your agreement to the following terms:<br>1、The real-time price of goods may vary due to market fluctuations; the final transaction price is subject to the platform's pricing.<br>2、Due to display, photography, and image processing, there may be color deviations in the product; please refer to the actual product.<br></div>
 <div class="pay-confirm column-align-end-flex">
 <div class="pay-adult main-start-flex">
 <div id="xz" class="icon-img chose-icon" onclick="btn1()"></div>
-<div>我已满18岁，已阅读并同意<uni-text class="user-rule"><span>《用户协议》</span></uni-text></div>
+<div>I am over 18 years old, have read, and agree to the<uni-text class="user-rule"><span>"User Agreement"</span></uni-text></div>
 </div>
 <div class="pay-detail main-start-flex">
 <div class="pay-detail-left">
-<div>合计:￥<uni-text><span><?php echo round($item['integral_price']*$s,2);?></span></uni-text></div>
-<div class="main-end-flex">共<?php echo $s;?>件</div>
+<div>Total:￥<uni-text><span><?php echo round($item['integral_price']*$s,2);?></span></uni-text></div>
+<div class="main-end-flex">Total<?php echo $s;?>Items</div>
 </div>
-<div class="pay-button main-center-flex" onclick="payw()">确认支付</div>
+<div class="pay-button main-center-flex" onclick="payw()">Confirm Payment</div>
 </div>
 </div>
 <div class="u-popup bg" id="dialog" style="display: none;">
-<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">操作成功，正在为您准备发货</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="gourl('warehouse.php?c=2');">确定</div></div></div></div></div></div></div></div>
+<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">Operation Successful, Preparing Your Order for Shipment</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="gourl('warehouse.php?c=2');">Confirm</div></div></div></div></div></div></div></div>
 </div>
 
 
 <uni-toast id="msg" style="display: none;">
-<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> 余额不足 </p></div>
+<div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> Insufficient Balance </p></div>
 </uni-toast>
 </div>
 </uni-page-body></uni-page-wrapper></uni-page></uni-app>

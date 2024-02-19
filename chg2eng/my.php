@@ -1,4 +1,3 @@
-用户中心 - User Center
 成长值 - Growth Points
 账户余额(元) - Account Balance (CNY)
 哈希币 - Hash Coins
@@ -18,6 +17,3 @@
 设置 - Settings
 余额充值订单 - Balance Recharge Orders
 邀请有奖 - Rewards for Invitations
-主页 - Home
-商城 - Mall
-仓库 - Warehouse

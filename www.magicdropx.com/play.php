@@ -14,10 +14,10 @@ function preloadImage(url) {
     var img = new Image(); // 创建新的 <img> 对象
     img.style.display = 'none'; // 设置 display 为 none，确保图片不会被显示出来
     img.onload = function() {
-        console.log('图片已经成功加载');
+        console.log('Image successfully loaded');
     };
     img.onerror = function() {
-        console.log('无法加载图片');
+        console.log('Unable to load image');
     };
     img.src = url; // 设置图片地址
 }
@@ -66,7 +66,7 @@ preloadImage('static/image/goods/result-back.png');
 										</uni-text>
 									</div>
 								</div>
-								<div class="kai" style="display: none;">一键开启</div>
+								<div class="kai" style="display: none;">One-click Start</div>
 							</div>
 							<div class="u-popup">
 							</div>

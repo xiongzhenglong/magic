@@ -1,12 +1,12 @@
 function checklogin(){
 	if(document.getElementById("tel1").value=="") {
-		document.getElementById("msg1").innerHTML="用户名不能为空，请重新输入";
+		document.getElementById("msg1").innerHTML="Username cannot be empty, please re-enter";
 		document.getElementById("tel1").focus();
 		return false;
 	}
 	if(document.getElementById("pwd1").value=="")
 	{
-		document.getElementById("msg1").innerHTML="密码不能为空，请重新输入";
+		document.getElementById("msg1").innerHTML="Password cannot be empty, please re-enter";
 		document.getElementById("pwd1").focus();
 		return false;
 	}
@@ -15,13 +15,13 @@ function checklogin(){
 }
 function checkloginreg(){
 	if(document.getElementById("tel2").value=="") {
-		document.getElementById("msg2").innerHTML="用户名不能为空，请重新输入";
+		document.getElementById("msg2").innerHTML="Username cannot be empty, please re-enter";
 		document.getElementById("tel2").focus();
 		return false;
 	}
 	if(document.getElementById("pwd2").value=="")
 	{
-		document.getElementById("msg2").innerHTML="密码不能为空，请重新输入";
+		document.getElementById("msg2").innerHTML="Password cannot be empty, please re-enter";
 		document.getElementById("pwd2").focus();
 		return false;
 	}
@@ -31,11 +31,11 @@ function checkloginreg(){
 function loginpost2(){
 	var username=document.getElementById("tel2").value;
 	var password=document.getElementById("pwd2").value;
-	$('#msg').text("正在登录，请稍等..");
+	$('#msg').text("Logging in, please wait..");
 		$.post("llrj/c_login.php",{username:username,password:password},function(data){
 			//alert(data);
 			if(data==1){
-				$('#msg2').text("登录成功，正在进入系统..");
+				$('#msg2').text("Login successful, entering the system..");
 				window.setTimeout(show,1000);
 			}else{
 				$('#msg2').text(data);
@@ -47,11 +47,11 @@ function loginpost2(){
 function loginpost(){
 	var username=document.getElementById("tel1").value;
 	var password=document.getElementById("pwd1").value;
-	$('#msg').text("正在登录，请稍等..");
+	$('#msg').text("Logging in, please wait..");
 		$.post("llrj/c_login.php",{username:username,password:password},function(data){
 			//alert(data);
 			if(data==1){
-				$('#msg1').text("登录成功，正在进入系统..");
+				$('#msg1').text("Login successful, entering the system..");
 				window.setTimeout(show,1000);
 			}else{
 				$('#msg1').text(data);
@@ -194,19 +194,19 @@ function getcanku(){
             var Cont = document.getElementById("theList");
 			for(var i=0;i<msg.length;i++){
 				if(lx==1){
-					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">可分解<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>哈希币</div><div class="list-item-style" style="margin-top: 13px;">购买时间：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex" onclick="ycfj('+i+')">分解</div><div class="main-center-flex" onclick="gourl(&quot;tihuo.php?gid='+msg[i]['id']+'&quot;)">提货</div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">Can be decomposed into<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>Hash coins</div><div class="list-item-style" style="margin-top: 13px;">Purchase time：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex" onclick="ycfj('+i+')">分解</div><div class="main-center-flex" onclick="gourl(&quot;tihuo.php?gid='+msg[i]['id']+'&quot;)">提货</div></div></div>';
 				}
 				if(lx==2){					
-					html+='<div class="list-item-container"><div class="tipInfo">单号:'+msg[i]['exchange_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">分解时间：'+msg[i]['update_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex">完成</div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">Order number:'+msg[i]['exchange_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">Decomposition time：'+msg[i]['update_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex">Completed</div></div></div>';
 				}
 				if(lx==3){
-					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['deliver_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active" ><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">购买时间：'+msg[i]['update_time']+'</div><div class="opera-status">'+msg[i]['status']+'</div><div class="main-center-flex view-logistics"><div class="opera-change first-opera">查看物流</div><div class="opera-change">确认收货</div></div></div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['deliver_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active" ><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">Purchase time：'+msg[i]['update_time']+'</div><div class="opera-status">'+msg[i]['status']+'</div><div class="main-center-flex view-logistics"><div class="opera-change first-opera">View logistics</div><div class="opera-change">Confirm receipt</div></div></div></div></div>';
 				}
 				if(lx==0){
-					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">可分解<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>哈希币</div><div class="main-center-flex opera-status">'+msg[i]['status']+'</div><div class="status-box"></div></div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">Can be decomposed into<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>Hash coins</div><div class="main-center-flex opera-status">'+msg[i]['status']+'</div><div class="status-box"></div></div></div></div>';
 				}
 				if(lx==4){
-					html+='<div class="list-item-container"><div class="tipInfo">单号:'+msg[i]['order_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">购买时间：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex">完成</div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">Order number:'+msg[i]['order_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">Purchase time：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex">Completed</div></div></div>';
 				}
 				
 			}
@@ -214,7 +214,7 @@ function getcanku(){
             $("#hiddenPage").val(parseInt($("#hiddenPage").val()) + 1);
 			loadingitem.innerHTML = '';
         }else {
-            loadingitem.innerHTML = '<div style="text-align: center;"><div><uni-text><span>没有更多了</span></uni-text></div></div>';
+            loadingitem.innerHTML = '<div style="text-align: center;"><div><uni-text><span>No more items</span></uni-text></div></div>';
         }
 		canScroll = true; 
 	},"json");
