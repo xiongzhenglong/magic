@@ -38,64 +38,64 @@ if($uid==""){
 			</div>
 			<div class="user-info-text" onclick="gourl('level.php')">
 				<div><uni-text><span><?php echo $user['phone']?></span></uni-text></div>
-				<div class="grow-class">成长值 <?php echo $user['czz']?> &gt;</div>
+				<div class="grow-class">Growth Points <?php echo $user['czz']?> &gt;</div>
 			</div>
 		</div>
 	</div>
 <div class="account-price-container main-space-between">
 <div class="account-price-item my-banlance" style="font-size: 26px;" onclick="gourl('account.php')">
 <div class="balance-text"><?php echo $user['balance']?></div>
-<div class="desc-text">账户余额(元)</div>
+<div class="desc-text">Account Balance (CNY)</div>
 </div>
 <div class="account-price-item my-banlance" style="font-size: 26px;">
 <div class="balance-text"><?php echo $user['integral']?></div>
-<div class="desc-text">哈希币</div>
+<div class="desc-text">Hash Coins</div>
 </div>
 </div>
 <div class="level-container">
 <div class="content-class">
 <div class="left-area">
 <div class="v_text">V1</div>
-<div class="v_desc">未解锁 . 成长值需达到1000</div>
+<div class="v_desc">Unlocked at 1000 Growth Points</div>
 </div>
-<div class="right-area" onclick="gourl('level.php')">会员详情 &gt;</div>
+<div class="right-area" onclick="gourl('level.php')">Membership Details &gt;</div>
 </div>
 </div>
 <div class="prop-container" style="margin-top: -58px; background-image: url(&quot;static/image/center/center-back.png&quot;);">
 <div class="prop-center" style="background-image: url(&quot;static/image/center/free-center.png&quot;);">
-<div class="text-center">免单券</div>
+<div class="text-center">Free Order Coupons</div>
 <div class="num-center"><?php echo $user['mdj']?></div>
 </div>
 <div class="prop-center" style="background-image: url(&quot;static/image/center/prop-center.png&quot;);">
-<div class="text-center">道具卡</div>
+<div class="text-center">Prop Cards</div>
 <div class="num-center"><?php echo $user['djk']?></div>
 </div>
 </div>
 <div class="order-container">
-<div class="order-head main-start-flex my-order">我的订单</div>
+<div class="order-head main-start-flex my-order">My Orders</div>
 <div class="order-detail">
 <div class="order-item column-center-flex" onclick="gourl('order.php')">
 <div class="order-item-image"><uni-image class="order-icon">
 <div style="background-image: url(&quot;./static/img/un_pay.dcb54653.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
 <img src="./static/img/un_pay.dcb54653.png" draggable="false"></uni-image></div>
-<div class="order-name">待付款</div>
+<div class="order-name">Pending Payment</div>
 </div>
 <div class="order-item column-center-flex" onclick="gourl('order.php')">
 <div class="order-item-image"><uni-image class="order-icon">
 <div style="background-image: url(&quot;./static/img/finish.9f9c99ef.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
 <img src="./static/img/finish.9f9c99ef.png" draggable="false"></uni-image></div>
-<div class="order-name">待发货</div>
+<div class="order-name">Awaiting Shipment</div>
 </div>
 <div class="order-item column-center-flex" onclick="gourl('order.php')">
 <div class="order-item-image"><uni-image class="order-icon">
 <div style="background-image: url(&quot;./static/img/un_receive.b851eaf4.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
 <img src="./static/img/un_receive.b851eaf4.png" draggable="false"></uni-image></div>
-<div class="order-name">待收货</div>
+<div class="order-name">Awaiting Delivery</div>
 </div>
 </div>
 </div>
 <div class="service-container">
-<div class="service-head main-start-flex">我的服务</div>
+<div class="service-head main-start-flex">My Services</div>
 <div class="service-detail main-start-flex">
 <div class="service-item  my-service" onclick="gourl('coupon.php')">
 <div class="service-item-image">
@@ -105,7 +105,7 @@ if($uid==""){
 <img src="static/image/center/youhuiquan.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">优惠券</div>
+<div class="service-name">Coupons</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('open.php')">
 <div class="service-item-image">
@@ -115,7 +115,7 @@ if($uid==""){
 <img src="static/image/center/jilu.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">开盒记录</div>
+<div class="service-name">Box Opening Records</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('address.php')">
 <div class="service-item-image">
@@ -125,7 +125,7 @@ if($uid==""){
 <img src="static/image/center/dizhi1.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">地址管理</div>
+<div class="service-name">Address Management</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('customer.php')">
 <div class="service-item-image">
@@ -135,7 +135,7 @@ if($uid==""){
 <img src="static/image/center/kefu.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">联系客服</div>
+<div class="service-name">Contact Customer Service</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('setting.php')">
 <div class="service-item-image">
@@ -145,7 +145,7 @@ if($uid==""){
 <img src="static/image/center/shezhi.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">设置</div>
+<div class="service-name">Settings</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('recharge.php')">
 <div class="service-item-image">
@@ -155,7 +155,7 @@ if($uid==""){
 <img src="static/image/center/chongzhi-xianxing2-0.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">余额充值订单</div>
+<div class="service-name">Balance Recharge Orders</div>
 </div>
 <div class="service-item  my-service" onclick="gourl('invitations.php')">
 <div class="service-item-image">
@@ -165,7 +165,7 @@ if($uid==""){
 <img src="static/image/center/liwu-copy.png" draggable="false"></uni-image></div>
 </div>
 </div>
-<div class="service-name">邀请有奖</div>
+<div class="service-name">Rewards for Invitations</div>
 </div>
 </div>
 </div>
