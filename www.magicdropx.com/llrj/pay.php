@@ -75,13 +75,13 @@ if($boxd['wanfa']==1){
 			$sql= "update hm_order_record set total_amount='$total_amount',total_exchange_integral='$hxbhj',total_profit='$syhj' where id='$order_record_id[0]'";//更新中奖表
 			mysqli_query($db,$sql) or die(mysqli_error($db));
 			
-			$json=array('code'=>1,'od'=>$order_id[0],'msg'=>'盲盒成功');
+			$json=array('code'=>1,'od'=>$order_id[0],'msg'=>'Blind box success');
 			echo json_encode($json);
 		}else{
-			echo '余额不足';
+			echo 'Insufficient balance';
 		}
 	}else{
-		$json=array('code'=>0,'od'=>0,'msg'=>'您不可以再次购买');
+		$json=array('code'=>0,'od'=>0,'msg'=>'You cannot purchase again');
 		echo json_encode($json);
 	}
 }
@@ -94,7 +94,7 @@ if($boxd['wanfa']==2){
 		
 		
 	}else{
-		$json=array('code'=>0,'od'=>0,'msg'=>'您不可以再次购买');
+		$json=array('code'=>0,'od'=>0,'msg'=>'You cannot purchase again');
 		echo json_encode($json);
 	}
 }
@@ -104,14 +104,14 @@ if($boxd['wanfa']==3){
 		
 		
 	}else{
-		echo '您不可以再次购买';
+		echo 'You cannot purchase again';
 	}
 }
 if($boxd['wanfa']==0){//玩法0普通盒子
 		//开始购买流程
 		//$sl=3;
 		if($sl<=0){
-			$json=array('code'=>0,'od'=>0,'msg'=>'数量错误');
+			$json=array('code'=>0,'od'=>0,'msg'=>'Quantity error');
 			echo json_encode($json);
 		}else{
 			$hj=$sl*$boxd['price'];
@@ -205,10 +205,10 @@ if($boxd['wanfa']==0){//玩法0普通盒子
 				$sql= "update hm_order_record set total_amount='$total_amount',total_exchange_integral='$hxbhj',total_profit='$syhj' where id='$order_record_id[0]'";//更新中奖表
 				mysqli_query($db,$sql) or die(mysqli_error($db));
 				
-				$json=array('code'=>1,'od'=>$order_id[0],'msg'=>'盲盒成功');
+				$json=array('code'=>1,'od'=>$order_id[0],'msg'=>'Blind box success');
 				echo json_encode($json);
 			}else{
-				$json=array('code'=>0,'od'=>0,'msg'=>'余额不足');
+				$json=array('code'=>0,'od'=>0,'msg'=>'Insufficient balance');
 				echo json_encode($json);
 			}
 		}

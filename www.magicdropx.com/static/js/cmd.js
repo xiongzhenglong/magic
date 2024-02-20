@@ -194,7 +194,7 @@ function getcanku(){
             var Cont = document.getElementById("theList");
 			for(var i=0;i<msg.length;i++){
 				if(lx==1){
-					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">Can be decomposed into<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>Hash coins</div><div class="list-item-style" style="margin-top: 13px;">Purchase time：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex" onclick="ycfj('+i+')">分解</div><div class="main-center-flex" onclick="gourl(&quot;tihuo.php?gid='+msg[i]['id']+'&quot;)">提货</div></div></div>';
+					html+='<div class="list-item-container"><div class="tipInfo">ID:'+msg[i]['id']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item_0">Can be decomposed into<uni-text><span>'+msg[i]['recovery_price']+'</span></uni-text>Hash coins</div><div class="list-item-style" style="margin-top: 13px;">Purchase time：'+msg[i]['create_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex" onclick="ycfj('+i+')">Decompose</div><div class="main-center-flex" onclick="gourl(&quot;tihuo.php?gid='+msg[i]['id']+'&quot;)">Pick up</div></div></div>';
 				}
 				if(lx==2){					
 					html+='<div class="list-item-container"><div class="tipInfo">Order number:'+msg[i]['exchange_no']+'</div><div class="list-item"><div class="list-item-image main-center-flex"><div class="u-transition u-fade-enter-to u-fade-enter-active"><div class="u-image" style="width: 88px; height: 88px; border-radius: 0px; overflow: visible; background-color: transparent;"><uni-image show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 88px; height: 88px;"><img src="'+msg[i]['goods_image']+'" draggable="false" style="opacity: 1;"></uni-image></div></div></div><div class="list-item-info"><div class="list-item-info-name text-ellipsis_2">'+msg[i]['goods_name']+'</div><div class="list-item-style" style="margin-top: 13px;">Decomposition time：'+msg[i]['update_time']+'</div><div class="status-box"></div></div></div><div class="list-operation"><div class="main-center-flex">Completed</div></div></div>';
@@ -222,7 +222,7 @@ function getcanku(){
 function fenjie(i){
 	$.post("llrj/getfenjie.php",{id:i},function(data){
 		if(data.code==1){
-			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">兑换成功</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="ycfj()">确定</div></div></div></div></div></div></div></div>';
+			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">Exchange Successful</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="ycfj()">Confirm</div></div></div></div></div></div></div></div>';
 			$("#fj").html(html);
 			$("#hiddenPage").val("0");
 			$("#theList").html("");
@@ -237,7 +237,7 @@ function tihuo(i){
 	$.post("llrj/gettihuo.php",{id:i},function(data){
 		//console.log(data);
 		if(data.code==1){
-			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">提货成功,发货中</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="gourl(&quot;warehouse.php&quot;)">确定</div></div></div></div></div></div></div></div>';
+			var html='<div style="position: fixed; inset: 0px; z-index: 10070; background-color: rgba(0, 0, 0, 0.5);"></div><div style="z-index: 10075; position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px;"><div><div class="container" data-v-5d12bc44=""><div data-v-5d12bc44="" class="main"><div data-v-5d12bc44="" class="close"></div><div data-v-5d12bc44="" class="body main-center-flex"><div data-v-5d12bc44="" class="content"><div data-v-5d12bc44="" class="title main-center-flex">Pick-up Successful, Shipping in Progress</div><div data-v-5d12bc44="" class="content-detail"><uni-text data-v-5d12bc44=""><span></span></uni-text></div><div data-v-5d12bc44="" class="button main-center-flex"><div data-v-5d12bc44="" class="button_1 main-center-flex" onclick="gourl(&quot;warehouse.php&quot;)">Confirm</div></div></div></div></div></div></div></div>';
 			$("#fj").html(html);
 			//$("#hiddenPage").val("0");
 			//$("#theList").html("");
@@ -355,7 +355,7 @@ function djsc(){
 	
 	
 	
-	$("#djs").text(t+"停止滚动");
+	$("#djs").text(t+"Stop Scrolling");
 }
 
 
@@ -466,33 +466,33 @@ function xsgm(){
 function editadd(){
 	//var id=gid;
 	if(document.getElementById("txt1").value.length < 1){
-		$('#msg').text("请填写收货人姓名");
+		$('#msg').text("Please enter the recipient's name");
 		document.getElementById("txt1").focus();
 		return false;
 	}
 	if(document.getElementById("txt2").value.length < 1){
-		$('#msg').text("请填写手机号码");
+		$('#msg').text("Please enter the phone number");
 		document.getElementById("txt2").focus();
 		return false;
 	}
 	if(document.getElementById("provice").value.length < 1){
-		$('#msg').text("选择地区");
+		$('#msg').text("Select Region");
 		document.getElementById("provice").focus();
 		return false;
 	}
 	if(document.getElementById("city").value.length < 1){
-		$('#msg').text("选择地区");
+		$('#msg').text("Select Region");
 		document.getElementById("city").focus();
 		return false;
 	}
 	if(document.getElementById("county").value.length < 1){
-		$('#msg').text("选择地区");
+		$('#msg').text("Select Region");
 		document.getElementById("county").focus();
 		return false;
 	}
 	
 	if(document.getElementById("txt4").value.length < 1){
-		$('#msg').text("请填写详细地址");
+		$('#msg').text("Please enter the detailed address");
 		document.getElementById("txt4").focus();
 		return false;
 	}
@@ -507,7 +507,7 @@ function editadd(){
 	var s9=document.getElementById("txt4").value;
 	$.post("./llrj/address.php",{lx:'edit',gid:gid,s1:s1,s2:s2,s3:s3,s4:s4,s5:s5,s6:s6,s7:s7,s8:s8,s9:s9,flag:flag},function(data){
 		if(data==1){
-			$('#msg1').text("修改成功");
+			$('#msg1').text("Modification Successful");
 			window.setTimeout(gourl('?gid='+gid),0);
 		}else{
 			$('#msg').text(data);
@@ -537,7 +537,7 @@ function getshen(v){
 		var strs= new Array(); //定义一数组
 		strs=data.split("|"); //字符分割
 		//strs=unescape(data).split("|"); //字符分割
-		document.getElementById("provice").add(new Option("省份",""));
+		document.getElementById("provice").add(new Option("Province",""));
 		for (i=0;i<strs.length ;i+=2 )
 		{
 			if(strs[i]!=""){
@@ -558,7 +558,7 @@ function getshi(v){
 		
 		var strs= new Array(); //定义一数组
 		strs=data.split("|"); //字符分割
-		document.getElementById("city").add(new Option("城市",""));
+		document.getElementById("city").add(new Option("City",""));
 		for (i=0;i<strs.length ;i+=2 )
 		{
 			if(strs[i]!=""){
@@ -580,7 +580,7 @@ function getqu(v){
 		
 		var strs= new Array(); //定义一数组
 		strs=data.split("|"); //字符分割
-		document.getElementById("county").add(new Option("县区",""));
+		document.getElementById("county").add(new Option("District",""));
 		for (i=0;i<strs.length ;i+=2 )
 		{
 			if(strs[i]!=""){
@@ -621,11 +621,11 @@ function msg(s){
 }
 function pay(){
 	if(xy!=1){
-		msg("请查看用户协议");
+		msg("Please read the user agreement");
 		return false;
 	}
 	if(gid<=0){
-		msg("商品错误");
+		msg("Product error");
 		return false;
 	}
 	$.post("llrj/pay.php",{gid:gid,zf:zf,sl:sl},function(data){
@@ -660,11 +660,11 @@ function sendpay1(s){
 }
 function payw(){
 	if(xy!=1){
-		msg("请查看用户协议");
+		msg("Please read the user agreement");
 		return false;
 	}
 	if(gid<=0){
-		msg("商品错误");
+		msg("Product error");
 		return false;
 	}
 	$.post("llrj/pays.php",{gid:gid,zf:zf,sl:sl},function(data){

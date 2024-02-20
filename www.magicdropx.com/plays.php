@@ -11,7 +11,7 @@ $oid=myTrim($_REQUEST['o']);
 $od=runsql($db,"select * from hm_order where blindbox_id='$bid' and user_id='$uid' and id='$oid' order by id desc limit 1");//订单信息
 
 if(!$od){
-	echo '订单不存在';
+	echo 'Order does not exist';
 	exit;
 }
 $box=runsqld($db,"select * from hm_blindbox_detail where blindbox_id='$bid' order by id asc");//盲盒里的商品
@@ -59,7 +59,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button::after{border:non
 <div class="wrap" style="background-image: url(&quot;static/image/goods/lottery-back2.png&quot;);">
 <div class="luckbox">
 <div class="head">
-<div class="head-image" style="background-image: url(&quot;static/image/goods/reward-bg.png&quot;);">恭喜获得</div>
+<div class="head-image" style="background-image: url(&quot;static/image/goods/reward-bg.png&quot;);">Congratulations on winning</div>
 </div>
 <div class="ranks">
 <?php 
@@ -70,7 +70,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button::after{border:non
 </div>
 <div class="cbox1" style="margin-top: 49px;">
 <div class="item_contents" style="background-image: url(&quot;static/image/goods/goods-pool-back.png&quot;);">
-<div class="cons_title">商品池</div>
+<div class="cons_title">Product Pool</div>
 <div class="cons_list">
 <uni-scroll-view class="scroll_list">
 <div class="uni-scroll-view"><div class="uni-scroll-view" style="overflow: auto hidden;">
@@ -96,16 +96,16 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button::after{border:non
 </div>
 </div>
 </div>
-<div class="count-class"><div class="count-view"><uni-text><span id="djs">0停止滚动</span></uni-text></div>
+<div class="count-class"><div class="count-view"><uni-text><span id="djs">0Stop scrolling</span></uni-text></div>
 </div>
-<div class="kai">一键开启</div>
+<div class="kai">Open all with one click</div>
 </div>
 <div data-v-30282a05="" class="u-popup"></div>
 
 <div class="uni-popup center" style="display: ;" id="zjk">
 <div>
 <div class="" name="mask" style="opacity: 1; position: fixed; inset: 0px; background-color: rgba(0, 0, 0, 0.4); transition: opacity 300ms ease 0ms, -webkit-transform 300ms ease 0ms, transform 300ms ease 0ms; transform-origin: 50% 50%;"></div>
-<div id="zjknr" class="" name="content" style="transform: scale(0); opacity: 1; position: fixed; display: flex; flex-direction: column; inset: 0px; justify-content: center; align-items: center; transition: opacity 300ms ease 0ms, -webkit-transform 300ms ease 0ms, transform 300ms ease 0ms; transform-origin: 50% 50%;top:0px"><div class="uni-popup__wrapper center" style="background-color: transparent;"><div class="result" style="background-image: url(&quot;static/image/goods/result-back.png&quot;);"><div class="rbox"><div class="tit" style="background-image: url(&quot;static/image/goods/result-title.png&quot;);">恭喜获得<uni-image class="close-img" onclick="gourl('./')"><div style="background-image: url(&quot;static/image/goods/share-close.png&quot;); background-position: center center; background-size: cover; background-repeat: no-repeat;"></div>
+<div id="zjknr" class="" name="content" style="transform: scale(0); opacity: 1; position: fixed; display: flex; flex-direction: column; inset: 0px; justify-content: center; align-items: center; transition: opacity 300ms ease 0ms, -webkit-transform 300ms ease 0ms, transform 300ms ease 0ms; transform-origin: 50% 50%;top:0px"><div class="uni-popup__wrapper center" style="background-color: transparent;"><div class="result" style="background-image: url(&quot;static/image/goods/result-back.png&quot;);"><div class="rbox"><div class="tit" style="background-image: url(&quot;static/image/goods/result-title.png&quot;);">Congratulations on winning<uni-image class="close-img" onclick="gourl('./')"><div style="background-image: url(&quot;static/image/goods/share-close.png&quot;); background-position: center center; background-size: cover; background-repeat: no-repeat;"></div>
 <img src="static/image/goods/share-close.png" draggable="false"></uni-image></div>
 <div class="goodsBox"><div class="cbox cbox-1">
 <?php
@@ -135,7 +135,7 @@ for($i=0;$i<count($jp);$i++){
 
 </div>
 </div>
-<div class="footer"><div class="receive common" onclick="gourl('warehouse.php')">去仓库查收</div>
+<div class="footer"><div class="receive common" onclick="gourl('warehouse.php')">Go to warehouse to receive</div>
 </div>
 </div>
 </div>

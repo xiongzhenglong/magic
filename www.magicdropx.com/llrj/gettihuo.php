@@ -9,7 +9,7 @@ $id=(int)$_REQUEST["id"];
 $jp=runsql($db,"select recovery_price,order_id,goods_name from hm_order_record_detail where id='$id' and status='1' order by id asc");//奖品
 
 if(!$jp){
-	$json=array('code'=>0,'msg'=>'提货失败');
+	$json=array('code'=>0,'msg'=>'Pickup failed');
 	echo json_encode($json);
 	mysqli_close($db);
 	exit;
@@ -32,7 +32,7 @@ $box_type='2';//'支付的盒子类型 1:全部 2:盒子中',
 $user_id=$uid;//'支付人id',
 $username=$user['nickname'];//'支付人名',
 $address_id=$dz['id'];//'发货地址id',
-$express_content='提货'.$jp[2];//'发货内容',
+$express_content='Pick up'.$jp[2];//'发货内容',
 $pay_time=$create_time;//'支付时间',
 $third_no='';//'三方单号',
 $third_return='';//'三方返回的信息',
@@ -65,7 +65,7 @@ $postage_fee=$amount;//'物流费用',
 $sql="INSERT INTO hm_user_box_deliver (deliver_no,express_order_id,address_id,address_info,user_id,`type`,status,express_name,express_code,express_no,express,express_status,postage_fee,create_time,update_time) VALUES ('$deliver_no','$express_order_id','$address_id','$address_info','$user_id','$type','$status','$express_name','$express_code','$express_no','$express','$express_status','$postage_fee','$create_time','$update_time')";//订单物流表
 mysqli_query($db,$sql) or die(mysqli_error($db));
 
-$json=array('code'=>1,'msg'=>'提货成功,发货中');
+$json=array('code'=>1,'msg'=>'Pickup successful, shipping in progress');
 echo json_encode($json);
 
 mysqli_close($db);

@@ -408,7 +408,7 @@ for($i=0;$i<count($box);$i++){
 </div>
 <div data-v-717eca78="" class="pay-detail main-start-flex">
 <div data-v-717eca78="" class="pay-detail-left">
-<div data-v-717eca78="">合计:￥<uni-text data-v-717eca78=""><span id="hj1"><?php echo $hj;?></span></uni-text></div>
+<div data-v-717eca78="">Total:￥<uni-text data-v-717eca78=""><span id="hj1"><?php echo $hj;?></span></uni-text></div>
 <div data-v-717eca78="" class="main-end-flex" id="sl1">Total<?php echo $sl;?>Items</div>
 </div>
 <div data-v-717eca78="" class="pay-button main-center-flex" onclick="xsqr()">Confirm Payment</div>

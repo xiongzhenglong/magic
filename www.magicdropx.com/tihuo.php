@@ -19,7 +19,7 @@ $dz=runsql($db,"select * from hm_user_address where user_id='$uid' and default_f
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>确认订单</title>
+<title>Confirm Order</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 <script src="./static/js/jquery-1.7.2.js?v=2030"></script>
 <script src="./static/js/cmd.js?v=2030"></script>
@@ -71,7 +71,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-59765974]:
 <div class="uni-page-head-btn"><i class="uni-btn-icon" style="color: rgb(0, 0, 0); font-size: 27px;"></i></div>
 <div class="uni-page-head-ft"></div>
 </div>
-<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> 确认订单 </div>
+<div class="uni-page-head-bd"><div class="uni-page-head__title" style="font-size: 16px; opacity: 1;"> Confirm Order </div>
 </div>
 <div class="uni-page-head-ft"></div>
 </div>
@@ -89,7 +89,7 @@ display:flex;flex-direction:row;flex-wrap:nowrap}.clear-button[data-v-59765974]:
 if($dz){
 	echo '<div class="head-title"><div class="head-name">'.$dz['receiver'].'<uni-text class="number"><span>'.$dz['phone'].'</span></uni-text></div><div class="number">'.$dz['province_name'].$dz['city_name'].$dz['area_name'].$dz['address'].'</div></div>';
 }else{
-	echo '<div class="head-title"><div class="head-name">请先添加地址</div></div>';
+	echo '<div class="head-title"><div class="head-name">Please Add Address First</div></div>';
 }
 ?>
 </div>
@@ -102,30 +102,30 @@ if($dz){
 </div>
 </div>
 <div class="list-body-right"><div class="goods-name text-ellipsis_2"><?php echo $god['goods_name']?></div>
-<div class="exchange">可分解<uni-text><span><?php echo $god['recovery_price']?></span></uni-text>哈希币</div>
+<div class="exchange">Can be decomposed into<uni-text><span><?php echo $god['recovery_price']?></span></uni-text>Hash Coins</div>
 </div>
 </div>
 </div>
 </div>
-<div class="fare"><div class="main-space-between fare-item"><div>运费</div>
+<div class="fare"><div class="main-space-between fare-item"><div>Shipping Fee</div>
 <div class="money">￥0</div>
 </div>
-<div class="fare-item fare-bottom">共1件 | 合计：<uni-text class="all-money"><span>￥0</span></uni-text></div>
+<div class="fare-item fare-bottom">Total 1 Item | Total：<uni-text class="all-money"><span>￥0</span></uni-text></div>
 </div>
-<div class="tip-info"><div>若完成交易代表您已同意以下约定：</div>
-<div>1、港澳台地区及部分偏远地区会无法配送</div>
-<div>2、受疫情等因素影响，多地物流公司接单和派送受影响，物流时效性有所延长，还请谅解，如有疑问请随时联系在线客服咨询。</div>
-<div>3、由于显示器，拍照和做图的过程中，产品可能发生颜色偏差，具体请以实物为准！</div>
+<div class="tip-info"><div>Completing the transaction means you agree to the following terms：</div>
+<div>1、Delivery is not available to Hong Kong, Macau, Taiwan, and some remote areas .</div>
+<div>2、Due to the pandemic and other factors, the order acceptance and delivery by logistics companies in many places are affected, leading to extended delivery times. Please understand and feel free to contact online customer service for inquiries .</div>
+<div>3、Color deviation may occur during the display, photographing, and image processing stages. Please refer to the actual product !</div>
 </div>
 </div>
 <div class="footer main-center-flex"><div class="left main-center-flex"></div>
 <div class="right main-center-flex"><div class="total"></div>
-<div class="pickBtn" onclick="tihuo(<?php echo $gid?>)">确认提货</div>
+<div class="pickBtn" onclick="tihuo(<?php echo $gid?>)">Confirm Pickup</div>
 </div>
 </div>
 
 </div>
 <div class="u-popup" id="fj" style="display: ;"></div>
-<uni-toast id="msg" style="display: none;"><div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> 余额不足 </p></div>
+<uni-toast id="msg" style="display: none;"><div class="uni-sample-toast"><p class="uni-simple-toast__text" id="msgtxt"> Insufficient Balance </p></div>
 </uni-toast>
 </uni-page-body></uni-page-wrapper></uni-page></uni-app></body></html>

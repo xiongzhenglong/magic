@@ -7,28 +7,28 @@ if($uid==""){
 function getztai($i){
 	//1:待发货  2:已发货 3:已签收  4:异常',
 	if($i=="1"){
-		return '待发货';
+		return 'Pending shipment';
 	}
 	if($i=="2"){
-		return '待收货';
+		return 'Awaiting delivery';
 	}
 	if($i=="3"){
-		return '已签收';
+		return 'Delivered';
 	}
 	if($i=="4"){
-		return '异常';
+		return 'Exception';
 	}
 }
 function getozt($i){
 	//1 盒子中 2 已兑换 3 已提货
 	if($i=="1"){
-		return '盒子中';
+		return 'In the box';
 	}
 	if($i=="2"){
-		return '已兑换';
+		return 'Exchanged';
 	}
 	if($i=="3"){
-		return '已提货';
+		return 'Picked up';
 	}
 }
 $lx=(int)$_REQUEST["lx"];

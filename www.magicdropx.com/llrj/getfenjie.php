@@ -10,7 +10,7 @@ $jp=runsql($db,"select order_id,goods_id,goods_price,recovery_price from hm_orde
 
 
 if(!$jp){
-	$json=array('code'=>0,'msg'=>'兑换失败');
+	$json=array('code'=>0,'msg'=>'Exchange failed');
 	echo json_encode($json);
 	mysqli_close($db);
 	exit;
@@ -38,7 +38,7 @@ $sql="INSERT INTO hm_user_integral_change_log (user_id,username,integral,type,or
 
 mysqli_query($db,$sql) or die(mysqli_error($db));
 
-$json=array('code'=>1,'msg'=>'兑换成功');
+$json=array('code'=>1,'msg'=>'Exchange successful');
 echo json_encode($json);
 
 mysqli_close($db);

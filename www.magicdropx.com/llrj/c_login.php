@@ -14,7 +14,7 @@ if($reg){
 	echo (1);
 }
 else{
-	echo ("登录失败!账号密码错误!");
+	echo ("Login failed! Incorrect account or password!");
 }
 mysqli_close($db);
 ?>

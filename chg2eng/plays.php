@@ -1,0 +1,6 @@
+"订单不存在" - "Order does not exist"
+"恭喜获得" - "Congratulations on winning"
+"商品池" - "Product Pool"
+"停止滚动" - "Stop scrolling"
+"一键开启" - "Open all with one click"
+"去仓库查收" - "Go to warehouse to receive"

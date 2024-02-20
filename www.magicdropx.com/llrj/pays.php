@@ -7,10 +7,10 @@ if($uid<=0){
 }
 function getgg($i){
 	if($i=="1"){
-		return '单规格';
+		return 'Single specification';
 	}
 	if($i=="2"){
-		return '多规格';
+		return 'Multiple specifications';
 	}
 }
 
@@ -102,10 +102,10 @@ $exchange_id='0';//'关联的回收的id',
 $sql="INSERT INTO hm_user_integral_change_log (user_id,username,integral,type,order_id,exchange_id,create_time,update_time) VALUES ('$user_id','$username','$integral','$type','$order_id','$exchange_id','$create_time','$update_time')";//用户哈希币变动记录
 mysqli_query($db,$sql) or die(mysqli_error($db));
 
-$json=array('code'=>1,'od'=>0,'msg'=>'兑换成功');
+$json=array('code'=>1,'od'=>0,'msg'=>'Exchange successful');
 echo json_encode($json);
 }else{
-	$json=array('code'=>0,'od'=>0,'msg'=>'余额不足');
+	$json=array('code'=>0,'od'=>0,'msg'=>'Insufficient balance');
 	echo json_encode($json);
 }
 mysqli_close($db);

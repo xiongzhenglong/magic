@@ -23,7 +23,7 @@ $qy=$_REQUEST['qy'];
 		
 		if($reg[20]+300>$code_time){
 			//print_r($reg);
-			$str='验证码还在有效期';
+			$str='Verification code is still valid';
 		}else{
 			$sql="update hm_user set code='$code',code_time='$code_time' where phone='$name'";
 			mysqli_query($db,$sql) or die(mysqli_error($db));//奖品状态
